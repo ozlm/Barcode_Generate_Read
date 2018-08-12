@@ -1,0 +1,3298 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteScout.TextRecognition</name>
+    </assembly>
+    <members>
+        <member name="F:Bytescout.PDF.LineCaptionType.Inline">
+            <summary>
+            Indicates Inline as annotations caption positioning.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineCaptionType.Top">
+            <summary>
+            Indicates Top as annotations caption positioning.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.Square">
+            <summary>
+            A square.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.Circle">
+            <summary>
+            A circle.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.Diamond">
+            <summary>
+            A diamond shape.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.OpenArrow">
+            <summary>
+            Two short lines meeting in an acute angle to form an open arrowhead.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.ClosedArrow">
+            <summary>
+            Two short lines meeting in an acute angle as in the Bytescout.PDF.PDFLineEndingStyle.OpenArrow style
+            and connected by a third line to form a triangular closed arrowhead.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.None">
+            <summary>
+            No line ending.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.Butt">
+            <summary>
+            A short line at the endpoint perpendicular to the line itself.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.ROpenArrow">
+            <summary>
+            Two short lines in the reverse direction from Bytescout.PDF.PDFLineEndingStyle.OpenArrow.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.RClosedArrow">
+            <summary>
+            A triangular closed arrowhead in the reverse direction from Bytescout.PDF.PDFLineEndingStyle.ClosedArrow.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.LineEndingStyle.Slash">
+            <summary>
+            A short line at the endpoint approximately 30 degrees clockwise from perpendicular to the line itself.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.Times">
+            <summary>
+            Times New Roman font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.TimesBold">
+            <summary>
+            Times New Roman bold font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.TimesItalic">
+            <summary>
+            Times New Roman italic font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.TimesBoldItalic">
+            <summary>
+            Times New Roman bold italic font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.Helvetica">
+            <summary>
+            Helvetica font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.HelveticaBold">
+            <summary>
+            Helvetica bold font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.HelveticaOblique">
+            <summary>
+            Helvetica italic font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.HelveticaBoldOblique">
+            <summary>
+            Helvetica bold italic font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.Courier">
+            <summary>
+            Courier font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.CourierBold">
+            <summary>
+            Courier bold font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.CourierOblique">
+            <summary>
+            Courier italic font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.CourierBoldOblique">
+            <summary>
+            Courier bold italic font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.Symbol">
+            <summary>
+            Symbol font.
+            </summary>
+        </member>
+        <member name="F:Bytescout.PDF.StandardFonts.ZapfDingbats">
+            <summary>
+            Zapf Dingbats font.
+            </summary>
+        </member>
+        <member name="T:Tesseract.Interop.ITessApiSignatures">
+            <summary>
+            The exported tesseract api signatures.
+            </summary>
+            <remarks>
+            Please note this is only public for technical reasons (you can't proxy a internal interface).
+            It should be considered an internal interface and is NOT part of the public api and may have
+            breaking changes between releases.
+            </remarks>
+        </member>
+        <member name="M:Tesseract.Interop.ITessApiSignatures.BaseApiCreate">
+            <summary>
+            Creates a new BaseAPI instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tesseract.Interop.ITessApiSignatures.BaseApiDelete(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Deletes a base api instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tesseract.Interop.ITessApiSignatures.ResultIteratorGetChoiceIterator(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Native API call to TessResultIteratorGetChoiceIterator
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tesseract.Interop.ITessApiSignatures.ChoiceIteratorDelete(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Native API call to TessChoiceIteratorDelete
+            </summary>
+            <param name="handle"></param>
+        </member>
+        <member name="M:Tesseract.Interop.ITessApiSignatures.ChoiceIteratorNext(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Native API call to TessChoiceIteratorNext
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tesseract.Interop.ITessApiSignatures.ChoiceIteratorGetUTF8TextInternal(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Native API call to TessChoiceIteratorGetUTF8Text
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tesseract.Interop.ITessApiSignatures.ChoiceIteratorGetConfidence(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Native API call to TessChoiceIteratorConfidence
+            </summary>
+            <param name="handle"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tesseract.Interop.ILeptonicaApiSignatures">
+            <summary>
+            The exported leptonica api signatures.
+            </summary>
+            <remarks>
+            Please note this is only public for technical reasons (you can't proxy a internal interface).
+            It should be considered an internal interface and is NOT part of the public api and may have 
+            breaking changes between releases.
+            </remarks>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapCreate(System.Int32)">
+            <summary>
+            Creates a new colormap with the specified <paramref name="depth" />.
+            </summary>
+            <param name="depth">The depth of the pix in bpp, can be 2, 4, or 8</param>
+            <returns>The pointer to the color map, or null on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapCreateRandom(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Creates a new colormap of the specified <paramref name="depth" /> with random colors where the first color can optionally be set to black, and the last optionally set to white.
+            </summary>
+            <param name="depth">The depth of the pix in bpp, can be 2, 4, or 8</param>
+            <param name="hasBlack">If set to 1 the first color will be black.</param>
+            <param name="hasWhite">If set to 1 the last color will be white.</param>
+            <returns>The pointer to the color map, or null on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapCreateLinear(System.Int32,System.Int32)">
+            <summary>
+            Creates a new colormap of the specified <paramref name="depth" /> with equally spaced gray color values. 
+            </summary>
+            <param name="depth">The depth of the pix in bpp, can be 2, 4, or 8</param>
+            <param name="levels">The number of levels (must be between 2 and 2^<paramref name="depth" /></param>
+            <returns>The pointer to the colormap, or null on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapCopy(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Performs a deep copy of the color map.
+            </summary>
+            <param name="cmaps">The pointer to the colormap instance.</param>
+            <returns>The pointer to the colormap, or null on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapDestroy(System.IntPtr@)">
+            <summary>
+            Destorys and cleans up any memory used by the color map.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance, set to null on success.</param>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetCount(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Gets the number of color entries in the color map.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <returns>Returns the number of color entries in the color map, or 0 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetFreeCount(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Gets the number of free color entries in the color map.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <returns>Returns the number of free color entries in the color map, or 0 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetDepth(System.Runtime.InteropServices.HandleRef)">
+            <returns>Returns color maps depth, or 0 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetMinDepth(System.Runtime.InteropServices.HandleRef,System.Int32@)">
+            <summary>
+            Gets the minimum pix depth required to support the color map.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="minDepth">Returns the minimum depth to support the colormap</param>
+            <returns>Returns 0 if OK, 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapClear(System.Runtime.InteropServices.HandleRef)">
+            <summary>
+            Removes all colors from the color map by setting the count to zero.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <returns>Returns 0 if OK, 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapAddColor(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Adds the color to the pix color map if their is room.
+            </summary>
+            <returns>Returns 0 if OK, 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapAddNewColor(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Adds the specified color if it doesn't already exist, returning the colors index in the data array.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="redValue">The red value</param>
+            <param name="greenValue">The green value</param>
+            <param name="blueValue">The blue value</param>
+            <param name="colorIndex">The index of the new color if it was added, or the existing color if it already existed.</param>
+            <returns>Returns 0 for success, 1 for error, 2 for not enough space.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapAddNearestColor(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Adds the specified color if it doesn't already exist, returning the color's index in the data array.
+            </summary>
+            <remarks>
+            If the color doesn't exist and there is not enough room to add a new color return the nearest color.
+            </remarks>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="redValue">The red value</param>
+            <param name="greenValue">The green value</param>
+            <param name="blueValue">The blue value</param>
+            <param name="colorIndex">The index of the new color if it was added, or the existing color if it already existed.</param>
+            <returns>Returns 0 for success, 1 for error, 2 for not enough space.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapUsableColor(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Checks if the color already exists or if their is enough room to add it.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="redValue">The red value</param>
+            <param name="greenValue">The green value</param>
+            <param name="blueValue">The blue value</param>
+            <param name="usable">Returns 1 if usable; 0 if not.</param>
+            <returns>Returns 0 if OK, 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapAddBlackOrWhite(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32@)">
+            <summary>
+            Adds a color (black\white) if not already there returning it's index through <paramref name="index" />.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="color">The color to add (0 for black; 1 for white)</param>
+            <param name="index">The index of the color.</param>
+            <returns>Returns 0 if OK; 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapSetBlackAndWhite(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32)">
+            <summary>
+            Sets the darkest color in the colormap to black, if <paramref name="setBlack" /> is 1. 
+            Sets the lightest color in the colormap to white if <paramref name="setWhite" /> is 1. 
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="setBlack">0 for no operation; 1 to set darket color to black</param>
+            <param name="setWhite">0 for no operation; 1 to set lightest color to white</param>
+            <returns>Returns 0 if OK; 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetColor(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32@,System.Int32@,System.Int32@)">
+            <summary>
+            Gets the color at the specified index.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="index">The index of the color entry.</param>
+            <param name="redValue">The color entry's red value.</param>
+            <param name="blueValue">The color entry's blue value.</param>
+            <param name="greenValue">The color entry's green value.</param>
+            <returns>Returns 0 if OK; 1 if not accessable (caller should check).</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetColor32(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32@)">
+            <summary>
+            Gets the color at the specified index.
+            </summary>
+            <remarks>
+            The alpha channel will always be zero as it is not used in Leptonica color maps.
+            </remarks>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="index">The index of the color entry.</param>
+            <param name="color">The color entry as 32 bit value</param>
+            <returns>Returns 0 if OK; 1 if not accessable (caller should check).</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapResetColor(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Sets a previously allocated color entry.
+            </summary>
+            <param name="cmap">The pointer to the colormap instance.</param>
+            <param name="index">The index of the colormap entry</param>
+            <param name="redValue"></param>
+            <param name="blueValue"></param>
+            <param name="greenValue"></param>
+            <returns>Returns 0 if OK; 1 if not accessable (caller should check).</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetIndex(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Gets the index of the color entry with the specified color, return 0 if found; 1 if not.
+            </summary>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapHasColor(System.Runtime.InteropServices.HandleRef,System.Int32)">
+            <summary>
+            Returns 0 if the color exists in the color map; otherwise 1.
+            </summary>
+            <returns>Returns 0 if OK; 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapCountGrayColors(System.Runtime.InteropServices.HandleRef,System.Int32@)">
+            <summary>
+            Returns the number of unique grey colors including black and white.
+            </summary>
+            <returns>Returns 0 if OK; 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetRankIntensity(System.Runtime.InteropServices.HandleRef,System.Single,System.Int32@)">
+            <summary>
+            Finds the index of the color entry with the rank intensity.
+            </summary>
+            <returns>Returns 0 if OK; 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetNearestIndex(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32,System.Int32,System.Int32@)">
+            <summary>
+            Finds the index of the color entry closest to the specified color.
+            </summary>
+            <returns>Returns 0 if OK; 1 on error.</returns>
+        </member>
+        <member name="M:Tesseract.Interop.ILeptonicaApiSignatures.pixcmapGetNearestGrayIndex(System.Runtime.InteropServices.HandleRef,System.Int32,System.Int32@)">
+            <summary>
+            Finds the index of the color entry closest to the specified color.
+            </summary>
+            <remarks>
+            Should only be used on gray colormaps.
+            </remarks>
+            <returns>Returns 0 if OK; 1 on error.</returns>
+        </member>
+        <member name="T:Tesseract.Interop.OSResult">
+            <summary></summary>
+        </member>
+        <member name="T:Tesseract.Orientation">
+            <summary>
+            Represents orientation that the page would need to be rotated so that .
+            </summary>
+            <remarks>
+            Orientation is defined as to what side of the page would need to correspond to the 'up' direction such that the characters will
+            be read able. Another way of looking at this what direction you need to rotate you head so that "up" aligns with Orientation, 
+            then the characters will appear "right side up" and readable.
+            
+            In short:
+            <list type="bullet"><item>PageUp - Page is correctly alligned with up and no rotation is needed.</item><item>PageRight - Page needs to be rotated so the right hand side is up, 90 degress counter clockwise, to be readable.</item><item>PageDown - Page needs to be rotated so the bottom side is up, 180 degress counter clockwise, to be readable.</item><item>PageLeft - Page needs to be rotated so the left hand side is up, 90 degress clockwise, to be readable.</item></list></remarks>
+        </member>
+        <member name="F:Tesseract.Orientation.PageUp">
+            <summary>
+            Page is correctly alligned with up and no rotation is needed.
+            </summary>
+        </member>
+        <member name="F:Tesseract.Orientation.PageRight">
+            <summary>
+            Page needs to be rotated so the right hand side is up, 90 degress counter clockwise, to be readable.
+            </summary>
+        </member>
+        <member name="F:Tesseract.Orientation.PageDown">
+            <summary>
+            Page needs to be rotated so the bottom side is up, 180 degress counter clockwise, to be readable.
+            </summary>
+        </member>
+        <member name="F:Tesseract.Orientation.PageLeft">
+            <summary>
+            Page needs to be rotated so the left hand side is up, 90 degress clockwise, to be readable.
+            </summary>
+        </member>
+        <member name="T:Tesseract.PageSegMode">
+            <summary>
+            Represents the possible page layou analysis modes.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.OsdOnly">
+            <summary>
+            Orientation and script detection (OSD) only.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.AutoOsd">
+            <summary>
+            Automatic page sementation with orientantion and script detection (OSD).
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.AutoOnly">
+            <summary>
+            Automatic page segmentation, but no OSD, or OCR.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.Auto">
+            <summary>
+            Fully automatic page segmentation, but no OSD.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.SingleColumn">
+            <summary>
+            Assume a single column of text of variable sizes.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.SingleBlockVertText">
+            <summary>
+            Assume a single uniform block of vertically aligned text.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.SingleBlock">
+            <summary>
+            Assume a single uniform block of text.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.SingleLine">
+            <summary>
+            Treat the image as a single text line.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.SingleWord">
+            <summary>
+            Treat the image as a single word.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.CircleWord">
+            <summary>
+            Treat the image as a single word in a circle.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.SingleChar">
+            <summary>
+            Treat the image as a single character.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PageSegMode.Count">
+            <summary>
+            Number of enum entries.
+            </summary>
+        </member>
+        <member name="T:Tesseract.PixArrayAccessType">
+            <summary>
+            Determines how <see cref="T:Tesseract.Pix" /> of a <see cref="!:PixArray" /> structure are accessed.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PixArrayAccessType.Insert">
+            <summary>
+            Stuff it in; no copy, clone or copy-clone.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PixArrayAccessType.Copy">
+            <summary>
+            Make/use a copy of the object.
+            </summary>
+        </member>
+        <member name="F:Tesseract.PixArrayAccessType.Clone">
+            <summary>
+            Make/use clone (ref count) of the object   
+            </summary>
+        </member>
+        <member name="F:Tesseract.PixArrayAccessType.CopyClone">
+            <summary>
+            Make a new object and fill with with clones of each object in the array(s) 
+            </summary>
+        </member>
+        <member name="T:Tesseract.RotationFill">
+            <summary>
+            What colour pixels should be used for the outside?
+            </summary>
+        </member>
+        <member name="F:Tesseract.RotationFill.White">
+            <summary>
+            Bring in white pixels from the outside.
+            </summary>
+        </member>
+        <member name="F:Tesseract.RotationFill.Black">
+            <summary>
+            Bring in black pixels from the outside.
+            </summary>
+        </member>
+        <member name="T:Tesseract.RotationMethod">
+            <summary>
+            Represents the method used to rotate an image.
+            </summary>
+        </member>
+        <member name="F:Tesseract.RotationMethod.AreaMap">
+            <summary>
+            Use area map rotation, if possible.
+            </summary>
+        </member>
+        <member name="F:Tesseract.RotationMethod.Shear">
+            <summary>
+            Use shear rotation.
+            </summary>
+        </member>
+        <member name="F:Tesseract.RotationMethod.Sampling">
+            <summary>
+            Use sampling.
+            </summary>
+        </member>
+        <member name="T:Tesseract.TesseractException">
+            <summary>
+            Desctiption of TesseractException.
+            </summary>
+        </member>
+        <member name="T:Tesseract.TextLineOrder">
+            <summary>
+            The text lines are read in the given sequence.
+            </summary>
+            <remarks>
+                <para>
+            For example in English the order is top-to-bottom. Chinese vertical text lines
+            are read right-to-left. While Mongolian is written in vertical columns
+            like Chinese but read left-to-right.
+            </para>
+                <para>
+            Note that only some combinations makes sense for example <see cref="F:Tesseract.WritingDirection.LeftToRight" /> implies
+            <see cref="F:Tesseract.TextLineOrder.TopToBottom" />.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:Tesseract.TextLineOrder.LeftToRight">
+            <summary>
+            The text lines form vertical columns ordered left to right.
+            </summary>
+        </member>
+        <member name="F:Tesseract.TextLineOrder.RightToLeft">
+            <summary>
+            The text lines form vertical columns ordered right to left.
+            </summary>
+        </member>
+        <member name="F:Tesseract.TextLineOrder.TopToBottom">
+            <summary>
+            The text lines form horizontal columns ordered top to bottom.
+            </summary>
+        </member>
+        <member name="T:Tesseract.WritingDirection">
+            <summary>
+            The grapheme cluster within a line of text are laid out logically in this direction,
+            judged when looking at the text line rotated so that Orientation is "page up".
+            </summary>
+        </member>
+        <member name="F:Tesseract.WritingDirection.LeftToRight">
+            <summary>
+            The text line from the left hand side to the right hand side when the page is rotated so it's orientation is <see cref="F:Tesseract.Orientation.PageUp" />.
+            </summary>
+        </member>
+        <member name="F:Tesseract.WritingDirection.RightToLeft">
+            <summary>
+            The text line from the right hand side to the left hand side when the page is rotated so it's orientation is <see cref="F:Tesseract.Orientation.PageUp" />.
+            </summary>
+        </member>
+        <member name="F:Tesseract.WritingDirection.TopToBottom">
+            <summary>
+            The text line from the top to the bottom of the page when the page is rotated so it's orientation is <see cref="F:Tesseract.Orientation.PageUp" />.
+            </summary>
+        </member>
+        <member name="T:LibTiff.Classic.TiffTag">
+            <summary>
+            TIFF tag definitions.
+            </summary>
+            <remarks>
+            Joris Van Damme maintains
+            <a href="http://www.awaresystems.be/imaging/tiff/tifftags.html" target="_blank">
+            TIFF Tag Reference</a>, good source of tag information. It's an overview of known TIFF
+            Tags with properties, short description, and other useful information.
+            </remarks>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IGNORE">
+            <summary>
+            Tag placeholder
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SUBFILETYPE">
+            <summary>
+            Subfile data descriptor.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.FileType" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.OSUBFILETYPE">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Kind of data in subfile. For the list of possible values, see <see cref="T:LibTiff.Classic.OFileType" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IMAGEWIDTH">
+            <summary>
+            Image width in pixels.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IMAGELENGTH">
+            <summary>
+            Image height in pixels.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BITSPERSAMPLE">
+            <summary>
+            Bits per channel (sample).
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.COMPRESSION">
+            <summary>
+            Data compression technique.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.Compression" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PHOTOMETRIC">
+            <summary>
+            Photometric interpretation.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.Photometric" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.THRESHHOLDING">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Thresholding used on data. For the list of possible values, see <see cref="T:LibTiff.Classic.Threshold" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CELLWIDTH">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Dithering matrix width.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CELLLENGTH">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Dithering matrix height.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FILLORDER">
+            <summary>
+            Data order within a byte.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.FillOrder" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DOCUMENTNAME">
+            <summary>
+            Name of document which holds for image.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IMAGEDESCRIPTION">
+            <summary>
+            Information about image.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.MAKE">
+            <summary>
+            Scanner manufacturer name.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.MODEL">
+            <summary>
+            Scanner model name/number.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.STRIPOFFSETS">
+            <summary>
+            Offsets to data strips.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ORIENTATION">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Image orientation. For the list of possible values, see <see cref="T:LibTiff.Classic.Orientation" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SAMPLESPERPIXEL">
+            <summary>
+            Samples per pixel.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ROWSPERSTRIP">
+            <summary>
+            Rows per strip of data.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.STRIPBYTECOUNTS">
+            <summary>
+            Bytes counts for strips.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.MINSAMPLEVALUE">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Minimum sample value.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.MAXSAMPLEVALUE">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Maximum sample value.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.XRESOLUTION">
+            <summary>
+            Pixels/resolution in x.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.YRESOLUTION">
+            <summary>
+            Pixels/resolution in y.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PLANARCONFIG">
+            <summary>
+            Storage organization.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.PlanarConfig" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PAGENAME">
+            <summary>
+            Page name image is from.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.XPOSITION">
+            <summary>
+            X page offset of image lhs.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.YPOSITION">
+            <summary>
+            Y page offset of image lhs.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FREEOFFSETS">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Byte offset to free block.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FREEBYTECOUNTS">
+            <summary>
+            [obsoleted by TIFF rev. 5.0]<br />
+            Sizes of free blocks.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GRAYRESPONSEUNIT">
+            <summary>
+            [obsoleted by TIFF rev. 6.0]<br />
+            Gray scale curve accuracy.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.GrayResponseUnit" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GRAYRESPONSECURVE">
+            <summary>
+            [obsoleted by TIFF rev. 6.0]<br />
+            Gray scale response curve.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GROUP3OPTIONS">
+            <summary>
+            Options for CCITT Group 3 fax encoding. 32 flag bits.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.Group3Opt" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.T4OPTIONS">
+            <summary>
+            TIFF 6.0 proper name alias for GROUP3OPTIONS.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GROUP4OPTIONS">
+            <summary>
+            Options for CCITT Group 4 fax encoding. 32 flag bits.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.Group3Opt" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.T6OPTIONS">
+            <summary>
+            TIFF 6.0 proper name alias for GROUP4OPTIONS.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.RESOLUTIONUNIT">
+            <summary>
+            Units of resolutions.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.ResUnit" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PAGENUMBER">
+            <summary>
+            Page numbers of multi-page.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.COLORRESPONSEUNIT">
+            <summary>
+            [obsoleted by TIFF rev. 6.0]<br />
+            Color curve accuracy.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.ColorResponseUnit" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.TRANSFERFUNCTION">
+            <summary>
+            Colorimetry info.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SOFTWARE">
+            <summary>
+            Name &amp; release.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DATETIME">
+            <summary>
+            Creation date and time.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ARTIST">
+            <summary>
+            Creator of image.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.HOSTCOMPUTER">
+            <summary>
+            Machine where created.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PREDICTOR">
+            <summary>
+            Prediction scheme w/ LZW.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.Predictor" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.WHITEPOINT">
+            <summary>
+            Image white point.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PRIMARYCHROMATICITIES">
+            <summary>
+            Primary chromaticities.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.COLORMAP">
+            <summary>
+            RGB map for pallette image.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.HALFTONEHINTS">
+            <summary>
+            Highlight + shadow info.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.TILEWIDTH">
+            <summary>
+            Tile width in pixels.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.TILELENGTH">
+            <summary>
+            Tile height in pixels.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.TILEOFFSETS">
+            <summary>
+            Offsets to data tiles.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.TILEBYTECOUNTS">
+            <summary>
+            Byte counts for tiles.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BADFAXLINES">
+            <summary>
+            Lines with wrong pixel count.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CLEANFAXDATA">
+            <summary>
+            Regenerated line info.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.CleanFaxData" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CONSECUTIVEBADFAXLINES">
+            <summary>
+            Max consecutive bad lines.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SUBIFD">
+            <summary>
+            Subimage descriptors.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.INKSET">
+            <summary>
+            Inks in separated image.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.InkSet" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.INKNAMES">
+            <summary>
+            ASCII names of inks.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.NUMBEROFINKS">
+            <summary>
+            Number of inks.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DOTRANGE">
+            <summary>
+            0% and 100% dot codes.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.TARGETPRINTER">
+            <summary>
+            Separation target.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXTRASAMPLES">
+            <summary>
+            Information about extra samples.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.ExtraSample" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SAMPLEFORMAT">
+            <summary>
+            Data sample format.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.SampleFormat" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SMINSAMPLEVALUE">
+            <summary>
+            Variable MinSampleValue.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SMAXSAMPLEVALUE">
+            <summary>
+            Variable MaxSampleValue.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CLIPPATH">
+            <summary>
+            ClipPath. Introduced post TIFF rev 6.0 by Adobe TIFF technote 2.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.XCLIPPATHUNITS">
+            <summary>
+            XClipPathUnits. Introduced post TIFF rev 6.0 by Adobe TIFF technote 2.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.YCLIPPATHUNITS">
+            <summary>
+            YClipPathUnits. Introduced post TIFF rev 6.0 by Adobe TIFF technote 2.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.INDEXED">
+            <summary>
+            Indexed. Introduced post TIFF rev 6.0 by Adobe TIFF Technote 3.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGTABLES">
+            <summary>
+            JPEG table stream. Introduced post TIFF rev 6.0.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.OPIPROXY">
+            <summary>
+            OPI Proxy. Introduced post TIFF rev 6.0 by Adobe TIFF technote.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGPROC">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            JPEG processing algorithm.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.JpegProc" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGIFOFFSET">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            Pointer to SOI marker.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGIFBYTECOUNT">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            JFIF stream length
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGRESTARTINTERVAL">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            Restart interval length.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGLOSSLESSPREDICTORS">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            Lossless proc predictor.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGPOINTTRANSFORM">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            Lossless point transform.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGQTABLES">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            Q matrice offsets.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGDCTABLES">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            DCT table offsets.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGACTABLES">
+            <summary>
+            [obsoleted by Technical Note #2 which specifies a revised JPEG-in-TIFF scheme]<br />
+            AC coefficient offsets.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.YCBCRCOEFFICIENTS">
+            <summary>
+            RGB -&gt; YCbCr transform.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.YCBCRSUBSAMPLING">
+            <summary>
+            YCbCr subsampling factors.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.YCBCRPOSITIONING">
+            <summary>
+            Subsample positioning.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.YCbCrPosition" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.REFERENCEBLACKWHITE">
+            <summary>
+            Colorimetry info.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.XMLPACKET">
+            <summary>
+            XML packet. Introduced post TIFF rev 6.0 by Adobe XMP Specification, January 2004.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.OPIIMAGEID">
+            <summary>
+            OPI ImageID. Introduced post TIFF rev 6.0 by Adobe TIFF technote.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.REFPTS">
+            <summary>
+            Image reference points. Private tag registered to Island Graphics.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.REGIONTACKPOINT">
+            <summary>
+            Region-xform tack point. Private tag registered to Island Graphics.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.REGIONWARPCORNERS">
+            <summary>
+            Warp quadrilateral. Private tag registered to Island Graphics.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.REGIONAFFINE">
+            <summary>
+            Affine transformation matrix. Private tag registered to Island Graphics.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.MATTEING">
+            <summary>
+            [obsoleted by TIFF rev. 6.0]<br />
+            Use EXTRASAMPLE tag. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DATATYPE">
+            <summary>
+            [obsoleted by TIFF rev. 6.0]<br />
+            Use SAMPLEFORMAT tag. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IMAGEDEPTH">
+            <summary>
+            Z depth of image. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.TILEDEPTH">
+            <summary>
+            Z depth/data tile. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXAR_IMAGEFULLWIDTH">
+            <summary>
+            Full image size in X. This tag is set when an image has been cropped out of a larger
+            image. It reflect width of the original uncropped image. The XPOSITION tag can be used
+            to determine the position of the smaller image in the larger one.
+            Private tag registered to Pixar.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXAR_IMAGEFULLLENGTH">
+            <summary>
+            Full image size in Y. This tag is set when an image has been cropped out of a larger
+            image. It reflect height of the original uncropped image. The YPOSITION can be used
+            to determine the position of the smaller image in the larger one.
+            Private tag registered to Pixar.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXAR_TEXTUREFORMAT">
+            <summary>
+            Texture map format. Used to identify special image modes and data used by Pixar's
+            texture formats. Private tag registered to Pixar.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXAR_WRAPMODES">
+            <summary>
+            S&amp;T wrap modes. Used to identify special image modes and data used by Pixar's
+            texture formats. Private tag registered to Pixar.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXAR_FOVCOT">
+            <summary>
+            Cotan(fov) for env. maps. Used to identify special image modes and data used by
+            Pixar's texture formats. Private tag registered to Pixar.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXAR_MATRIX_WORLDTOSCREEN">
+            <summary>
+            Used to identify special image modes and data used by Pixar's texture formats.
+            Private tag registered to Pixar.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXAR_MATRIX_WORLDTOCAMERA">
+            <summary>
+            Used to identify special image modes and data used by Pixar's texture formats.
+            Private tag registered to Pixar.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.WRITERSERIALNUMBER">
+            <summary>
+            Device serial number. Private tag registered to Eastman Kodak.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.COPYRIGHT">
+            <summary>
+            Copyright string. This tag is listed in the TIFF rev. 6.0 w/ unknown ownership.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.RICHTIFFIPTC">
+            <summary>
+            IPTC TAG from RichTIFF specifications.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8SITE">
+            <summary>
+            Site name. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8COLORSEQUENCE">
+            <summary>
+            Color seq. [RGB, CMYK, etc]. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8HEADER">
+            <summary>
+            DDES Header. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8RASTERPADDING">
+            <summary>
+            Raster scanline padding. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8BITSPERRUNLENGTH">
+            <summary>
+            The number of bits in short run. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8BITSPEREXTENDEDRUNLENGTH">
+            <summary>
+            The number of bits in long run. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8COLORTABLE">
+            <summary>
+            LW colortable. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8IMAGECOLORINDICATOR">
+            <summary>
+            BP/BL image color switch. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8BKGCOLORINDICATOR">
+            <summary>
+            BP/BL bg color switch. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8IMAGECOLORVALUE">
+            <summary>
+            BP/BL image color value. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8BKGCOLORVALUE">
+            <summary>
+            BP/BL bg color value. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8PIXELINTENSITYRANGE">
+            <summary>
+            MP pixel intensity value. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8TRANSPARENCYINDICATOR">
+            <summary>
+            HC transparency switch. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8COLORCHARACTERIZATION">
+            <summary>
+            Color characterization table. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8HCUSAGE">
+            <summary>
+            HC usage indicator. Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8TRAPINDICATOR">
+            <summary>
+            Trapping indicator (untrapped = 0, trapped = 1). Reserved for ANSI IT8 TIFF/IT.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.IT8CMYKEQUIVALENT">
+            <summary>
+            CMYK color equivalents.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FRAMECOUNT">
+            <summary>
+            Sequence Frame Count. Private tag registered to Texas Instruments.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PHOTOSHOP">
+            <summary>
+            Private tag registered to Adobe for PhotoShop.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIFIFD">
+            <summary>
+            Pointer to EXIF private directory. This tag is documented in EXIF specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ICCPROFILE">
+            <summary>
+            ICC profile data. ?? Private tag registered to Adobe. ??
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JBIGOPTIONS">
+            <summary>
+            JBIG options. Private tag registered to Pixel Magic.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GPSIFD">
+            <summary>
+            Pointer to GPS private directory. This tag is documented in EXIF specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FAXRECVPARAMS">
+            <summary>
+            Encoded Class 2 ses. params. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FAXSUBADDRESS">
+            <summary>
+            Received SubAddr string. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FAXRECVTIME">
+            <summary>
+            Receive time (secs). Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FAXDCS">
+            <summary>
+            Encoded fax ses. params, Table 2/T.30. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.STONITS">
+            <summary>
+            Sample value to Nits. Private tag registered to SGI.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FEDEX_EDR">
+            <summary>
+            Private tag registered to FedEx.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.INTEROPERABILITYIFD">
+            <summary>
+            Pointer to Interoperability private directory.
+            This tag is documented in EXIF specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DNGVERSION">
+            <summary>
+            DNG version number. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DNGBACKWARDVERSION">
+            <summary>
+            DNG compatibility version. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.UNIQUECAMERAMODEL">
+            <summary>
+            Name for the camera model. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.LOCALIZEDCAMERAMODEL">
+            <summary>
+            Localized camera model name. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CFAPLANECOLOR">
+            <summary>
+            CFAPattern-&gt;LinearRaw space mapping. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CFALAYOUT">
+            <summary>
+            Spatial layout of the CFA. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.LINEARIZATIONTABLE">
+            <summary>
+            Lookup table description. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BLACKLEVELREPEATDIM">
+            <summary>
+            Repeat pattern size for the BlackLevel tag. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BLACKLEVEL">
+            <summary>
+            Zero light encoding level. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BLACKLEVELDELTAH">
+            <summary>
+            Zero light encoding level differences (columns). Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BLACKLEVELDELTAV">
+            <summary>
+            Zero light encoding level differences (rows). Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.WHITELEVEL">
+            <summary>
+            Fully saturated encoding level. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DEFAULTSCALE">
+            <summary>
+            Default scale factors. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DEFAULTCROPORIGIN">
+            <summary>
+            Origin of the final image area. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DEFAULTCROPSIZE">
+            <summary>
+            Size of the final image area. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.COLORMATRIX1">
+            <summary>
+            XYZ-&gt;reference color space transformation matrix 1.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.COLORMATRIX2">
+            <summary>
+            XYZ-&gt;reference color space transformation matrix 2.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CAMERACALIBRATION1">
+            <summary>
+            Calibration matrix 1. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CAMERACALIBRATION2">
+            <summary>
+            Calibration matrix 2. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.REDUCTIONMATRIX1">
+            <summary>
+            Dimensionality reduction matrix 1. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.REDUCTIONMATRIX2">
+            <summary>
+            Dimensionality reduction matrix 2. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ANALOGBALANCE">
+            <summary>
+            Gain applied the stored raw values. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ASSHOTNEUTRAL">
+            <summary>
+            Selected white balance in linear reference space.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ASSHOTWHITEXY">
+            <summary>
+            Selected white balance in x-y chromaticity coordinates.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BASELINEEXPOSURE">
+            <summary>
+            How much to move the zero point. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BASELINENOISE">
+            <summary>
+            Relative noise level. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BASELINESHARPNESS">
+            <summary>
+            Relative amount of sharpening. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BAYERGREENSPLIT">
+            <summary>
+            How closely the values of the green pixels in the blue/green rows 
+            track the values of the green pixels in the red/green rows.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.LINEARRESPONSELIMIT">
+            <summary>
+            Non-linear encoding range. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CAMERASERIALNUMBER">
+            <summary>
+            Camera's serial number. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.LENSINFO">
+            <summary>
+            Information about the lens.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CHROMABLURRADIUS">
+            <summary>
+            Chroma blur radius. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ANTIALIASSTRENGTH">
+            <summary>
+            Relative strength of the camera's anti-alias filter.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SHADOWSCALE">
+            <summary>
+            Used by Adobe Camera Raw. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DNGPRIVATEDATA">
+            <summary>
+            Manufacturer's private data. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.MAKERNOTESAFETY">
+            <summary>
+            Whether the EXIF MakerNote tag is safe to preserve along with the rest of the EXIF data.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CALIBRATIONILLUMINANT1">
+            <summary>
+            Illuminant 1. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CALIBRATIONILLUMINANT2">
+            <summary>
+            Illuminant 2. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.BESTQUALITYSCALE">
+            <summary>
+            Best quality multiplier. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.RAWDATAUNIQUEID">
+            <summary>
+            Unique identifier for the raw image data. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ORIGINALRAWFILENAME">
+            <summary>
+            File name of the original raw file. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ORIGINALRAWFILEDATA">
+            <summary>
+            Contents of the original raw file. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ACTIVEAREA">
+            <summary>
+            Active (non-masked) pixels of the sensor. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.MASKEDAREAS">
+            <summary>
+            List of coordinates of fully masked pixels. Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ASSHOTICCPROFILE">
+            <summary>
+            Used to map cameras's color space into ICC profile space.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ASSHOTPREPROFILEMATRIX">
+            <summary>
+            Used to map cameras's color space into ICC profile space.
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CURRENTICCPROFILE">
+            <summary>
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.CURRENTPREPROFILEMATRIX">
+            <summary>
+            Introduced by Adobe DNG specification.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSHUESHIFTVALUES">
+            <summary>
+            Undefined tag used by Eastman Kodak, hue shift correction data.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FAXMODE">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Group 3/4 format control.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.FaxMode" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGQUALITY">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Compression quality level. Quality level is on the IJG 0-100 scale. Default value is 75.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGCOLORMODE">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Auto RGB&lt;=&gt;YCbCr convert.
+            For the list of possible values, see <see cref="T:LibTiff.Classic.JpegColorMode" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.JPEGTABLESMODE">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            For the list of possible values, see <see cref="T:LibTiff.Classic.JpegTablesMode" />.
+            Default is <see cref="F:LibTiff.Classic.JpegTablesMode.QUANT" /> | <see cref="F:LibTiff.Classic.JpegTablesMode.HUFF" />.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.FAXFILLFUNC">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            G3/G4 fill function.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXARLOGDATAFMT">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            PixarLogCodec I/O data sz.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSIMAGERTYPE">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Imager mode &amp; filter.
+            Allocated to Oceana Matrix (<a href="mailto:dev@oceana.com">dev@oceana.com</a>).
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSINTERPMODE">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Interpolation mode.
+            Allocated to Oceana Matrix (<a href="mailto:dev@oceana.com">dev@oceana.com</a>).
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSBALANCEARRAY">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Color balance values.
+            Allocated to Oceana Matrix (<a href="mailto:dev@oceana.com">dev@oceana.com</a>). 
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSCORRECTMATRIX">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Color correction values.
+            Allocated to Oceana Matrix (<a href="mailto:dev@oceana.com">dev@oceana.com</a>). 
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSGAMMA">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Gamma value.
+            Allocated to Oceana Matrix (<a href="mailto:dev@oceana.com">dev@oceana.com</a>). 
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSTOESHOULDERPTS">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Toe &amp; shoulder points.
+            Allocated to Oceana Matrix (<a href="mailto:dev@oceana.com">dev@oceana.com</a>). 
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSCALIBRATIONFD">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Calibration file description.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.ZIPQUALITY">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Compression quality level.
+            Quality level is on the ZLIB 1-9 scale. Default value is -1.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.PIXARLOGQUALITY">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            PixarLog uses same scale.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.DCSCLIPRECTANGLE">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            Area of image to acquire.
+            Allocated to Oceana Matrix (<a href="mailto:dev@oceana.com">dev@oceana.com</a>).
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SGILOGDATAFMT">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            SGILog user data format.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.SGILOGENCODE">
+            <summary>
+            [pseudo tag. not written to file]<br />
+            SGILog data encoding control.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_EXPOSURETIME">
+            <summary>
+            Exposure time.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FNUMBER">
+            <summary>
+            F number.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_EXPOSUREPROGRAM">
+            <summary>
+            Exposure program.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SPECTRALSENSITIVITY">
+            <summary>
+            Spectral sensitivity.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_ISOSPEEDRATINGS">
+            <summary>
+            ISO speed rating.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_OECF">
+            <summary>
+            Optoelectric conversion factor.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_EXIFVERSION">
+            <summary>
+            Exif version.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_DATETIMEORIGINAL">
+            <summary>
+            Date and time of original data generation.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_DATETIMEDIGITIZED">
+            <summary>
+            Date and time of digital data generation.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_COMPONENTSCONFIGURATION">
+            <summary>
+            Meaning of each component.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_COMPRESSEDBITSPERPIXEL">
+            <summary>
+            Image compression mode.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SHUTTERSPEEDVALUE">
+            <summary>
+            Shutter speed.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_APERTUREVALUE">
+            <summary>
+            Aperture.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_BRIGHTNESSVALUE">
+            <summary>
+            Brightness.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_EXPOSUREBIASVALUE">
+            <summary>
+            Exposure bias.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_MAXAPERTUREVALUE">
+            <summary>
+            Maximum lens aperture.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SUBJECTDISTANCE">
+            <summary>
+            Subject distance.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_METERINGMODE">
+            <summary>
+            Metering mode.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_LIGHTSOURCE">
+            <summary>
+            Light source.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FLASH">
+            <summary>
+            Flash.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FOCALLENGTH">
+            <summary>
+            Lens focal length.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SUBJECTAREA">
+            <summary>
+            Subject area.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_MAKERNOTE">
+            <summary>
+            Manufacturer notes.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_USERCOMMENT">
+            <summary>
+            User comments.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SUBSECTIME">
+            <summary>
+            DateTime subseconds.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SUBSECTIMEORIGINAL">
+            <summary>
+            DateTimeOriginal subseconds.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SUBSECTIMEDIGITIZED">
+            <summary>
+            DateTimeDigitized subseconds.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FLASHPIXVERSION">
+            <summary>
+            Supported Flashpix version.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_COLORSPACE">
+            <summary>
+            Color space information.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_PIXELXDIMENSION">
+            <summary>
+            Valid image width.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_PIXELYDIMENSION">
+            <summary>
+            Valid image height.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_RELATEDSOUNDFILE">
+            <summary>
+            Related audio file.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FLASHENERGY">
+            <summary>
+            Flash energy.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SPATIALFREQUENCYRESPONSE">
+            <summary>
+            Spatial frequency response.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FOCALPLANEXRESOLUTION">
+            <summary>
+            Focal plane X resolution.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FOCALPLANEYRESOLUTION">
+            <summary>
+            Focal plane Y resolution.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FOCALPLANERESOLUTIONUNIT">
+            <summary>
+            Focal plane resolution unit.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SUBJECTLOCATION">
+            <summary>
+            Subject location.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_EXPOSUREINDEX">
+            <summary>
+            Exposure index.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SENSINGMETHOD">
+            <summary>
+            Sensing method.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FILESOURCE">
+            <summary>
+            File source.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SCENETYPE">
+            <summary>
+            Scene type.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_CFAPATTERN">
+            <summary>
+            CFA pattern.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_CUSTOMRENDERED">
+            <summary>
+            Custom image processing.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_EXPOSUREMODE">
+            <summary>
+            Exposure mode.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_WHITEBALANCE">
+            <summary>
+            White balance.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_DIGITALZOOMRATIO">
+            <summary>
+            Digital zoom ratio.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_FOCALLENGTHIN35MMFILM">
+            <summary>
+            Focal length in 35 mm film.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SCENECAPTURETYPE">
+            <summary>
+            Scene capture type.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_GAINCONTROL">
+            <summary>
+            Gain control.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_CONTRAST">
+            <summary>
+            Contrast.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SATURATION">
+            <summary>
+            Saturation.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SHARPNESS">
+            <summary>
+            Sharpness.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_DEVICESETTINGDESCRIPTION">
+            <summary>
+            Device settings description.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_SUBJECTDISTANCERANGE">
+            <summary>
+            Subject distance range.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.EXIF_IMAGEUNIQUEID">
+            <summary>
+            Unique image ID.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GEOTIFF_MODELPIXELSCALETAG">
+            <summary>
+            This tag is defining exact affine transformations between raster and model space. Used in interchangeable GeoTIFF files.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GEOTIFF_MODELTIEPOINTTAG">
+            <summary>
+            This tag stores raster-&gt;model tiepoint pairs. Used in interchangeable GeoTIFF files.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffTag.GEOTIFF_MODELTRANSFORMATIONTAG">
+            <summary>
+            This tag is optionally provided for defining exact affine transformations between raster and model space. Used in interchangeable GeoTIFF files.
+            </summary>
+        </member>
+        <member name="T:LibTiff.Classic.TiffType">
+            <summary>
+            Tag data type.
+            </summary>
+            <remarks>Note: RATIONALs are the ratio of two 32-bit integer values.</remarks>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.NOTYPE">
+            <summary>
+            Placeholder.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.ANY">
+            <summary>
+            For field descriptor searching.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.BYTE">
+            <summary>
+            8-bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.ASCII">
+            <summary>
+            8-bit bytes with last byte <c>null</c>.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.SHORT">
+            <summary>
+            16-bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.LONG">
+            <summary>
+            32-bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.RATIONAL">
+            <summary>
+            64-bit unsigned fraction.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.SBYTE">
+            <summary>
+            8-bit signed integer.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.UNDEFINED">
+            <summary>
+            8-bit untyped data.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.SSHORT">
+            <summary>
+            16-bit signed integer.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.SLONG">
+            <summary>
+            32-bit signed integer.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.SRATIONAL">
+            <summary>
+            64-bit signed fraction.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.FLOAT">
+            <summary>
+            32-bit IEEE floating point.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.DOUBLE">
+            <summary>
+            64-bit IEEE floating point.
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.IFD">
+            <summary>
+            32-bit unsigned integer (offset)
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.LONG8">
+            <summary>
+            BigTIFF 64-bit unsigned long
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.SLONG8">
+            <summary>
+            BigTIFF 64-bit signed long
+            </summary>
+        </member>
+        <member name="F:LibTiff.Classic.TiffType.IFD8">
+            <summary>
+            BigTIFF 64-bit unsigned integer/long (offset)
+            </summary>
+        </member>
+        <member name="T:PDFCore.Font.FontType">
+            <summary>
+            PDF Font types
+            </summary>
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.CompressionAlgorithmTag">
+            <remarks>Basic tags for compression algorithms.</remarks>
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.HashAlgorithmTag">
+            <remarks>Basic tags for hash algorithms.</remarks>
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.PacketTag">
+            <remarks>Basic PGP packet tag types.</remarks>
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.PublicKeyAlgorithmTag">
+            <remarks>Public Key Algorithm tag numbers.</remarks>
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.SymmetricKeyAlgorithmTag">
+            Basic tags for symmetric key algorithms
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.OpenPgp.PgpDataValidationException">
+            <remarks>
+            Thrown if the IV at the start of a data stream indicates the wrong key is being used.
+            </remarks>
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.OpenPgp.PgpException">
+            <remarks>Generic exception class for PGP encoding/decoding problems.</remarks>
+        </member>
+        <member name="T:Org.BouncyCastle.Bcpg.OpenPgp.PgpKeyValidationException">
+            <remarks>
+            Thrown if the key checksum is invalid.
+            </remarks>
+        </member>
+        <member name="T:Org.BouncyCastle.Crypto.DataLengthException">
+            this exception is thrown if a buffer that is meant to have output
+            copied into it turns out to be too short, or if we've been given
+            insufficient input. In general this exception will Get thrown rather
+            than an ArrayOutOfBounds exception.
+        </member>
+        <member name="M:Org.BouncyCastle.Crypto.DataLengthException.#ctor">
+            base constructor.
+        </member>
+        <member name="M:Org.BouncyCastle.Crypto.DataLengthException.#ctor(System.String)">
+             create a DataLengthException with the given message.
+            
+             @param message the message to be carried with the exception.
+        </member>
+        <member name="T:Org.BouncyCastle.Crypto.InvalidCipherTextException">
+            this exception is thrown whenever we find something we don't expect in a
+            message.
+        </member>
+        <member name="M:Org.BouncyCastle.Crypto.InvalidCipherTextException.#ctor">
+            base constructor.
+        </member>
+        <member name="M:Org.BouncyCastle.Crypto.InvalidCipherTextException.#ctor(System.String)">
+             create a InvalidCipherTextException with the given message.
+            
+             @param message the message to be carried with the exception.
+        </member>
+        <member name="T:Org.BouncyCastle.Crypto.MaxBytesExceededException">
+            <summary>
+            This exception is thrown whenever a cipher requires a change of key, iv
+            or similar after x amount of bytes enciphered
+            </summary>
+        </member>
+        <member name="M:Org.BouncyCastle.Security.SecurityUtilityException.#ctor">
+            base constructor.
+        </member>
+        <member name="M:Org.BouncyCastle.Security.SecurityUtilityException.#ctor(System.String)">
+             create a SecurityUtilityException with the given message.
+            
+             @param message the message to be carried with the exception.
+        </member>
+        <member name="T:Org.BouncyCastle.Pkix.PkixCertPath">
+             An immutable sequence of certificates (a certification path).<br /><br />
+             This is an abstract class that defines the methods common to all CertPaths.
+             Subclasses can handle different kinds of certificates (X.509, PGP, etc.).<br /><br />
+             All CertPath objects have a type, a list of Certificates, and one or more
+             supported encodings. Because the CertPath class is immutable, a CertPath
+             cannot change in any externally visible way after being constructed. This
+             stipulation applies to all public fields and methods of this class and any
+             added or overridden by subclasses.<br /><br />
+             The type is a string that identifies the type of Certificates in the
+             certification path. For each certificate cert in a certification path
+             certPath, cert.getType().equals(certPath.getType()) must be true.<br /><br />
+             The list of Certificates is an ordered List of zero or more Certificates.
+             This List and all of the Certificates contained in it must be immutable.<br /><br />
+             Each CertPath object must support one or more encodings so that the object
+             can be translated into a byte array for storage or transmission to other
+             parties. Preferably, these encodings should be well-documented standards
+             (such as PKCS#7). One of the encodings supported by a CertPath is considered
+             the default encoding. This encoding is used if no encoding is explicitly
+             requested (for the {@link #getEncoded()} method, for instance).<br /><br />
+             All CertPath objects are also Serializable. CertPath objects are resolved
+             into an alternate {@link CertPathRep} object during serialization. This
+             allows a CertPath object to be serialized into an equivalent representation
+             regardless of its underlying implementation.<br /><br />
+             CertPath objects can be created with a CertificateFactory or they can be
+             returned by other classes, such as a CertPathBuilder.<br /><br />
+             By convention, X.509 CertPaths (consisting of X509Certificates), are ordered
+             starting with the target certificate and ending with a certificate issued by
+             the trust anchor. That is, the issuer of one certificate is the subject of
+             the following one. The certificate representing the
+             {@link TrustAnchor TrustAnchor} should not be included in the certification
+             path. Unvalidated X.509 CertPaths may not follow these conventions. PKIX
+             CertPathValidators will detect any departure from these conventions that
+             cause the certification path to be invalid and throw a
+             CertPathValidatorException.<br /><br /><strong>Concurrent Access</strong><br /><br />
+             All CertPath objects must be thread-safe. That is, multiple threads may
+             concurrently invoke the methods defined in this class on a single CertPath
+             object (or more than one) with no ill effects. This is also true for the List
+             returned by CertPath.getCertificates.<br /><br />
+             Requiring CertPath objects to be immutable and thread-safe allows them to be
+             passed around to various pieces of code without worrying about coordinating
+             access. Providing this thread-safety is generally not difficult, since the
+             CertPath and List objects in question are immutable.
+            
+             @see CertificateFactory
+             @see CertPathBuilder
+            <summary>
+            CertPath implementation for X.509 certificates.
+            </summary></member>
+        <member name="M:Org.BouncyCastle.Pkix.PkixCertPath.#ctor(System.Collections.ICollection)">
+             Creates a CertPath of the specified type.
+             This constructor is protected because most users should use
+             a CertificateFactory to create CertPaths.
+             @param type the standard name of the type of Certificatesin this path
+            
+        </member>
+        <member name="M:Org.BouncyCastle.Pkix.PkixCertPath.#ctor(System.IO.Stream,System.String)">
+             Creates a CertPath of the specified type.
+             This constructor is protected because most users should use
+             a CertificateFactory to create CertPaths.
+            
+             @param type the standard name of the type of Certificatesin this path
+            
+        </member>
+        <member name="P:Org.BouncyCastle.Pkix.PkixCertPath.Encodings">
+             Returns an iteration of the encodings supported by this
+             certification path, with the default encoding
+             first. Attempts to modify the returned Iterator via its
+             remove method result in an UnsupportedOperationException.
+            
+             @return an Iterator over the names of the supported encodings (as Strings)
+            
+        </member>
+        <member name="M:Org.BouncyCastle.Pkix.PkixCertPath.Equals(System.Object)">
+             Compares this certification path for equality with the specified object.
+             Two CertPaths are equal if and only if their types are equal and their
+             certificate Lists (and by implication the Certificates in those Lists)
+             are equal. A CertPath is never equal to an object that is not a CertPath.<br /><br />
+             This algorithm is implemented by this method. If it is overridden, the
+             behavior specified here must be maintained.
+            
+             @param other
+                        the object to test for equality with this certification path
+            
+             @return true if the specified object is equal to this certification path,
+                     false otherwise
+            
+             @see Object#hashCode() Object.hashCode()
+        </member>
+        <member name="P:Org.BouncyCastle.Pkix.PkixCertPath.Certificates">
+            <summary>
+            Returns the list of certificates in this certification
+            path.
+            </summary>
+        </member>
+        <member name="T:Org.BouncyCastle.Pkix.PkixCertPathBuilderException">
+            <summary>
+            Summary description for PkixCertPathBuilderException.
+            </summary>
+        </member>
+        <member name="T:Org.BouncyCastle.Pkix.PkixCertPathValidatorException">
+             An exception indicating one of a variety of problems encountered when 
+             validating a certification path. <br /><br />
+             A <code>CertPathValidatorException</code> provides support for wrapping
+             exceptions. The {@link #getCause getCause} method returns the throwable, 
+             if any, that caused this exception to be thrown. <br /><br />
+             A <code>CertPathValidatorException</code> may also include the 
+             certification path that was being validated when the exception was thrown 
+             and the index of the certificate in the certification path that caused the 
+             exception to be thrown. Use the {@link #getCertPath getCertPath} and
+             {@link #getIndex getIndex} methods to retrieve this information.<br /><br /><b>Concurrent Access</b><br /><br />
+             Unless otherwise specified, the methods defined in this class are not
+             thread-safe. Multiple threads that need to access a single
+             object concurrently should synchronize amongst themselves and
+             provide the necessary locking. Multiple threads each manipulating
+             separate objects need not synchronize.
+            
+             @see CertPathValidator
+            
+        </member>
+        <member name="M:Org.BouncyCastle.Pkix.PkixCertPathValidatorException.#ctor(System.String)">
+            <summary>
+            Creates a <code>PkixCertPathValidatorException</code> with the given detail
+            message. A detail message is a <code>String</code> that describes this
+            particular exception. 
+            </summary>
+            <param name="message">the detail message</param>
+        </member>
+        <member name="M:Org.BouncyCastle.Pkix.PkixCertPathValidatorException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a <code>PkixCertPathValidatorException</code> with the specified
+            detail message and cause.
+            </summary>
+            <param name="message">the detail message</param>
+            <param name="cause">the cause (which is saved for later retrieval by the
+            {@link #getCause getCause()} method). (A <code>null</code>
+            value is permitted, and indicates that the cause is
+            nonexistent or unknown.)</param>
+        </member>
+        <member name="M:Org.BouncyCastle.Pkix.PkixCertPathValidatorException.#ctor(System.String,System.Exception,Org.BouncyCastle.Pkix.PkixCertPath,System.Int32)">
+            <summary>
+            Creates a <code>PkixCertPathValidatorException</code> with the specified
+            detail message, cause, certification path, and index.
+            </summary>
+            <param name="message">the detail message (or <code>null</code> if none)</param>
+            <param name="cause">the cause (or <code>null</code> if none)</param>
+            <param name="certPath">the certification path that was in the process of being
+            validated when the error was encountered</param>
+            <param name="index">the index of the certificate in the certification path that</param>																																																																																   * 
+        </member>
+        <member name="P:Org.BouncyCastle.Pkix.PkixCertPathValidatorException.Message">
+            <summary>
+            Returns the detail message for this <code>CertPathValidatorException</code>.
+            </summary>
+            <returns>the detail message, or <code>null</code> if neither the message nor cause were specified</returns>
+        </member>
+        <member name="P:Org.BouncyCastle.Pkix.PkixCertPathValidatorException.CertPath">
+            Returns the certification path that was being validated when the
+            exception was thrown.
+            
+            @return the <code>CertPath</code> that was being validated when the
+                    exception was thrown (or <code>null</code> if not specified)
+        </member>
+        <member name="P:Org.BouncyCastle.Pkix.PkixCertPathValidatorException.Index">
+            Returns the index of the certificate in the certification path that
+            caused the exception to be thrown. Note that the list of certificates in
+            a <code>CertPath</code> is zero based. If no index has been set, -1 is
+            returned.
+            
+            @return the index that has been set, or -1 if none has been set
+        </member>
+        <member name="T:Org.BouncyCastle.Tsp.TspValidationException">
+            Exception thrown if a TSP request or response fails to validate.
+            <p>
+            If a failure code is associated with the exception it can be retrieved using
+            the getFailureCode() method.</p></member>
+        <member name="P:Org.BouncyCastle.Tsp.TspValidationException.FailureCode">
+             Return the failure code associated with this exception - if one is set.
+            
+             @return the failure code if set, -1 otherwise.
+        </member>
+        <member name="T:ByteScout.TextRecognition.AreaRotation">
+            <summary>
+            Specifies the direction of an image's rotation and the axis used to flip the image.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipXY">
+            <summary>
+            Specifies a 180-degree rotation followed by a horizontal flip and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipNone">
+            <summary>
+            Specifies no rotation and no flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipXY">
+            <summary>
+            Specifies a 270-degree rotation followed by a horizontal flip and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipNone">
+            <summary>
+            Specifies a 90-degree rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipNone">
+            <summary>
+            Specifies a 180-degree rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipXY">
+            <summary>
+            Specifies no rotation, a horizontal flip, and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipNone">
+            <summary>
+            Specifies a 270-degree rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipXY">
+            <summary>
+            Specifies a 90-degree rotation followed by a horizontal flip and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipY">
+            <summary>
+            Specifies a 180-degree rotation followed by a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipX">
+            <summary>
+            Specifies no rotation and a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipY">
+            <summary>
+            Specifies a 270-degree rotation followed by a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipX">
+            <summary>
+            Specifies a 90-degree rotation followed by a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipX">
+            <summary>
+            Specifies a 180-degree rotation followed by a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipY">
+            <summary>
+            Specifies no rotation and a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipX">
+            <summary>
+            Specifies a 270-degree rotation followed by a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipY">
+            <summary>
+            Specifies a 90-degree rotation followed by a vertical flip.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.BaseRecognizer">
+            <summary>
+            Represents base class for text recognizers.
+            </summary>
+        </member>
+        <member name="E:ByteScout.TextRecognition.BaseRecognizer.PasswordRequired">
+            <summary>
+             Occurs when the password required to open PDF document.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.RegistrationName">
+            <summary>
+            Gets or sets the name part of the registration information.
+            </summary>
+            <value>The name part of the registration information.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.RegistrationKey">
+            <summary>
+            Gets or sets the key number part of registration information.
+            </summary>
+            <value>The key number part of registration information.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution">
+            <summary>
+            Gets or sets PDF rendering resolution. Default is 300 DPI.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingOptions">
+            <summary>
+            Gets or sets PDF rendering options.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.OCRLanguage">
+            <summary>
+            Language for Optical Character Recognition (OCR). The valid values are: 
+            <list type="bullet"><listheader><term>Value</term><description>Language</description></listheader><item><term>"eng"</term><description>English (default)</description></item><item><term>"deu"</term><description>German</description></item><item><term>"fra"</term><description>French</description></item><item><term>"spa"</term><description>Spanish</description></item><item><term>...</term><description>See more languages at https://github.com/tesseract-ocr/tessdata/tree/3.04.00 </description></item></list></summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.OCRLanguageDataFolder">
+            <summary>
+            Folder containing OCR language data files. The folder can be located anywhere by must be strongly named "tessdata".
+            </summary>
+            <remarks>
+            By default the component expects "tessdata" in the folder containing the executing assembly.
+            </remarks>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.IsDocumentLoaded">
+            <summary>
+            Gets whether a document is loaded.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.Version">
+            <summary>
+            Gets version of the component.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.Dispose">
+            <summary>
+            Releases managed resources of the component.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.Clear">
+            <summary>
+            Releases loaded document and allocated resources.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.String)">
+            <summary>
+            Loads document from file.
+            </summary>
+            <param name="fileName">File name (path).</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.Byte[])">
+            <summary>
+            Loads document from byte array.
+            </summary>
+            <param name="bytes">Array of bytes.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.Int64)">
+            <summary>
+            Loads document from Win32 HBITMAP structure.
+            </summary>
+            <param name="hBitmap">HBITMAP pointer.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.Drawing.Image)">
+            <summary>
+            Loads document from <see cref="T:System.Drawing.Image" /> object.
+            </summary>
+            <param name="image">Image object.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.IO.Stream)">
+            <summary>
+            Loads document from stream.
+            </summary>
+            <param name="stream">Document stream.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageCount">
+            <summary>
+            Returns number of pages in loaded document.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageSize(System.Int32)">
+            <summary>
+            Returns document page dimensions in pixels.
+            </summary>
+            <param name="pageIndex">Page index.</param>
+            <remarks>Pixel size of PDF document page is calculated from document point size (1/72") and <see cref="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution" /> value.</remarks>
+            <returns>Dimensions of the document page in pixels.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageWidth(System.Int32)">
+            <summary>
+            Returns document page width in pixels.
+            </summary>
+            <param name="pageIndex">Page index.</param>
+            <remarks>Pixel size of PDF document page is calculated from document point size (1/72") and <see cref="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution" /> value.</remarks>
+            <returns>Width of the document page in pixels.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageHeight(System.Int32)">
+            <summary>
+            Returns document page height in pixels.
+            </summary>
+            <param name="pageIndex">Page index.</param>
+            <remarks>Pixel size of PDF document page is calculated from document point size (1/72") and <see cref="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution" /> value.</remarks>
+            <returns>Height of the document page in pixels.</returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.ComHelpers">
+            <summary>
+            Class containing helping methods to use the SDK from VBScript as ActiveX object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Paragraph">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Paragraph" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Block">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Block" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Line">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Line" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Word">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Word" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Symbol">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Symbol" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_Auto">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.Auto" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleBlock">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleBlock" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleLine">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleLine" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleWord">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleWord" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleCharacter">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleCharacter" /> enumeration value.</summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.PasswordEventHandler">
+            <summary>
+            Represents parameters for PasswordRequired event.
+            </summary>
+            <param name="sender">Event sender.</param>
+            <param name="password">Password string.</param>
+        </member>
+        <member name="T:ByteScout.TextRecognition.ImagePreprocessingFilterList">
+            <summary>
+            Represents collection of image preprocessing filters.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns> 
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddDeskew">
+            <summary>
+            Adds deskew image processing filter with default angle threshold 0.4 deg (minimal admissible skew angle).
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddDeskew(System.Double)">
+            <summary>
+            Adds deskew image processing filter with specified angle threshold (minimal admissible skew angle).
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddDilate">
+            <summary>
+            Adds dilate image processing filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddVerticalLinesRemover">
+            <summary>
+            Adds vertical lines remover filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddHorizontalLinesRemover">
+            <summary>
+            Adds horizontal lines remover filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddMedian">
+            <summary>
+            Adds median image processing filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddMedian(System.Int32)">
+            <summary>
+            Adds median filter with specified block size.
+            </summary>
+            <param name="blockSize">Block size of the median filter. Default is 3.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddGammaCorrection">
+            <summary>
+            Adds gamma correction filter with default value 1.4.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddGammaCorrection(System.Double)">
+            <summary>
+            Adds gamma correction filter.
+            </summary>
+            <param name="gamma">Gamma correction value. Best result provided by values between 1.25 to 1.7.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddContrast(System.Int32)">
+            <summary>
+            Adds contrast image processing  filter.
+            </summary>
+            <param name="contrast">Contrast value from -100 to 100. Default is 0 (no contrast adjustment).</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.Clear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRProposedContentType">
+            <summary>
+            Defines types of content proposed to be on a document page (or on a page region).
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.Auto">
+            <summary>
+            OCR engine will detect the content type automatically.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleBlock">
+            <summary>
+            A document page (or page region) contains single block of text.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleLine">
+            <summary>
+            A document page (or page region) contains single line of text.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleWord">
+            <summary>
+            A document page (or page region) contains single word.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleCharacter">
+            <summary>
+            A document page (or page region) contains single character.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.Correction">
+            <summary>
+            Represents a correction automatically applied to recognized text to fix repeating recognition errors.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.SearchString">
+            <summary>
+            Gets the search string.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.ReplacementString">
+            <summary>
+            Gets the replacement string.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.IsRegex">
+            <summary>
+            Gets whether the <see cref="P:ByteScout.TextRecognition.Correction.SearchString" /> is regular expression (Regex).
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.RegexOptions">
+            <summary>
+            Gets regular expression options.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.Correction.#ctor(System.String,System.String,System.Boolean,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Constructs OCRCorrection object.
+            </summary>
+            <param name="searchString">The search string.</param>
+            <param name="replacementString">The replacement string.</param>
+            <param name="isRegex">Specifies whether the search string is regular expression.</param>
+            <param name="regexOptions">Regular expression options.</param>
+            <seealso cref="P:ByteScout.TextRecognition.Correction.RegexOptions" />
+        </member>
+        <member name="M:ByteScout.TextRecognition.Correction.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />.
+            </summary>
+            <returns>true if the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+            <param name="obj">
+            The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            The <paramref name="obj" /> parameter is null.
+            </exception>
+        </member>
+        <member name="M:ByteScout.TextRecognition.Correction.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>
+            A hash code for the current <see cref="T:System.Object" />.
+            </returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.CorrectionList">
+            <summary>
+            Represents collection of corrections automatically applied to recognized text to fix repeating recognition errors.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.CorrectionList.Count">
+            <summary>
+            Gets count of items in collection.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.GetGenericList">
+            <summary>
+            Returns copy of the collection as generic list of <see cref="T:ByteScout.TextRecognition.Correction" /> objects.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.Add(System.String,System.String,System.Boolean,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="searchString">The search string.</param>
+            <param name="replacementString">The replacement string.</param>
+            <param name="isRegex">Specifies whether the search string is regular expression.</param>
+            <param name="regexOptions">Regular expression options.</param>
+            <seealso cref="T:System.Text.RegularExpressions.RegexOptions" />
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.Add(ByteScout.TextRecognition.Correction)">
+            <summary>
+            Adds <see cref="T:ByteScout.TextRecognition.Correction" /> item to collection.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.Clear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRObject">
+            <summary>
+            Represents recognized text object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.OCRObjectType">
+            <summary>
+            Gets type of the objects.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.X">
+            <summary>
+            Gets X coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Y">
+            <summary>
+            Gets Y coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Width">
+            <summary>
+            Gets width coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Height">
+            <summary>
+            Gets height coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Text">
+            <summary>
+            Gets object text.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Confidence">
+            <summary>
+            Gets recognition confidence.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObject.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:System.Object" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents the current <see cref="T:System.Object" />.
+            </returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRObjectList">
+            <summary>
+            Represents collection of recognized text objects.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObjectList.Count">
+            <summary>
+            Gets count of items in collection.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.GetGenericList">
+            <summary>
+            Returns copy of the collection as generic list of <see cref="T:ByteScout.TextRecognition.OCRObject" /> objects.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.Sort">
+            <summary>
+            Sorts the collection by Y, then by X coordinate.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.SortWithTolerance(System.Single,System.Single)">
+            <summary>
+            Sorts the collection by Y, then by X coordinate with tolerance.
+            </summary>
+            <param name="xTolerance">Tolerance for X coordinates.</param>
+            <param name="yTolerance">Tolerance for Y coordinates.</param>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRObjectType">
+            <summary>
+            Specifies OCR object types.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Paragraph">
+            <summary>Paragraph</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Block">
+            <summary>Block</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Line">
+            <summary>Line</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Word">
+            <summary>Word</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Symbol">
+            <summary>Symbol</summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.PDFRenderingOptions">
+            <summary>
+            PDF rendering options.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.TextSmoothingMode">
+            <summary>
+            Gets or sets the text smoothing mode.
+            </summary>
+            <value>
+            The text smoothing mode.
+            </value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.VectorSmoothingMode">
+            <summary>
+            Gets or sets the vector smoothing mode.
+            </summary>
+            <value>
+            The vector smoothing mode.
+            </value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.ImageInterpolationMode">
+            <summary>
+            Gets or sets the image interpolation mode.
+            </summary>
+            <value>
+            The image interpolation mode.
+            </value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderTextObjects">
+            <summary>
+            Gets or sets whether to render text objects. True by default.
+            </summary>
+            <value>
+                <c>True</c> if render text objects; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderVectorObjects">
+            <summary>
+            Gets or sets whether to render vector objects. True by default.
+            </summary>
+            <value>
+                <c>True</c> if render vector objects; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderImageObjects">
+            <summary>
+            Gets or sets whether to render image objects. True by default.
+            </summary>
+            <value>
+                <c>True</c> if render image objects; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderCurveVectorObjects">
+            <summary>
+            Gets or sets whether to render curve vector objects. True by default.
+            </summary>
+            <remarks>
+            Use <c>RenderCurveVectorObjects</c> if you need to hide curves but keep straight lines.
+            Use <see cref="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderVectorObjects" /> if you need to hide all vector drawings.
+            <see cref="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderVectorObjects" /> property supersedes <c>RenderCurveVectorObjects</c>.
+            </remarks>
+        </member>
+        <member name="T:ByteScout.TextRecognition.GraphicsTransformationQuality">
+            <summary>
+            Defines smoothing quality for text and vector graphics; interpolation quality for raster images.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.GraphicsTransformationQuality.HighQuality">
+            <summary>
+            Hight quality.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.GraphicsTransformationQuality.HighSpeed">
+            <summary>
+            High speed.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.RecognitionArea">
+            <summary>
+            Represents document page area for text recognition.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.X">
+            <summary>
+            Gets X coordinate of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Y">
+            <summary>
+            Gets Y coordinate of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Width">
+            <summary>
+            Gets width of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Height">
+            <summary>
+            Gets height of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Rotation">
+            <summary>
+            Gets the area rotation.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.ProposedContentType">
+            <summary>
+            Gets proposed content type.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Constructs new RecognitionArea object.
+            </summary>
+            <param name="x">X coordinate of the area.</param>
+            <param name="y">Y coordinate of the area.</param>
+            <param name="width">Width of the area.</param>
+            <param name="height">Height of the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Content proposed to be in the area.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.#ctor(System.Drawing.Rectangle,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Constructs new RecognitionArea object.
+            </summary>
+            <param name="rectangle">Rectangle defining the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Content proposed to be in the area.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />.
+            </summary>
+            <returns>true if the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+            <param name="obj">
+            The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            The <paramref name="obj" /> parameter is null.
+            </exception>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>
+            A hash code for the current <see cref="T:System.Object" />.
+            </returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.RecognitionAreaList">
+            <summary>
+            Represents collection of page areas intended for text recognition.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionAreaList.Count">
+            <summary>
+            Gets count of items in collection.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.GetGenericList">
+            <summary>
+            Returns copy of the collection as generic list of <see cref="T:ByteScout.TextRecognition.RecognitionArea" /> objects.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Add(System.Int32,System.Int32,System.Int32,System.Int32,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="x">X coordinate of the area.</param>
+            <param name="y">Y coordinate of the area.</param>
+            <param name="width">Width of the area.</param>
+            <param name="height">Height of the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Proposed content type.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Add(System.Drawing.Rectangle,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="rectangle">Rectangle defining the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Proposed content type.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Add(ByteScout.TextRecognition.RecognitionArea)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="item">
+                <see cref="T:ByteScout.TextRecognition.RecognitionArea" /> object to add.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Clear">
+            <summary>
+            Clears collection.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.TextRecognizer">
+            <summary>
+             Represents text recognizer that able to extract text from scanned PDF files 
+             and PNG, JPEG, BMP and TIFF (single-page) images using Optical Character Recognition (OCR).
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.ComHelpers">
+            <summary>
+            Set of helping methods for use from COM/ActiveX. 
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.PageSeparator">
+            <summary>
+            Gets or sets the page separator character or string. Default is "\r\n".
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.RecognitionAreas">
+            <summary>
+            Collection of page areas intended for text recognition.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.Corrections">
+            <summary>
+            Collection of corrections automatically applied to recognized text to fix repeating recognition errors.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.ImagePreprocessingFilters">
+            <summary>
+            Collection of image preprocessing filters.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.AutoDetectPageRotation">
+            <summary>
+            Gets or sets a value indicating whether the TextRecognizer will try to automatically detect 
+            the rotation of a scanned page. Default is <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.KeepTextFormatting">
+            <summary>
+            Gets or sets whether to try to keep the text formatting.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizer" /> class.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizer" /> class.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.GetOCRObjects(System.Int32,ByteScout.TextRecognition.OCRObjectType)">
+            <summary>
+            Performs the recognition and returns list of recognized text objects of specified level of discretization.
+            </summary>
+            <param name="pageIndex">Document page index.</param>
+            <param name="objectType">Objects type to return (level of discretization). Default is <see cref="F:ByteScout.TextRecognition.OCRObjectType.Word" />.</param>
+            <returns>List of recognized objects of specified discretization level.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.GetText(System.Int32,System.Int32)">
+            <summary>
+            Reads text from specifed document page range.
+            </summary>
+            <param name="startPage">Start page index (zero based).</param>
+            <param name="endPage">End page index (zero based). -1 means all pages to the end.</param>
+            <returns>Concatenated text from range of pages. Pages are separated with <see cref="P:ByteScout.TextRecognition.TextRecognizer.PageSeparator" /> symbol.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.SaveText(System.String,System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+             Saves text from specified page range to file.
+            </summary>
+            <param name="fileName">Output file name.</param>
+            <param name="startPage">Start page index.</param>
+            <param name="endPage">End page index. -1 means all pages to the end.</param>
+            <param name="encoding">The character encoding to use. UTF-8 encoding is used by default.</param>
+            <remarks>Text from different pages is  separated with <see cref="P:ByteScout.TextRecognition.TextRecognizer.PageSeparator" /> symbol.</remarks>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.SaveText(System.IO.Stream,System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+             Saves text from specified page range to  <see cref="T:System.IO.Stream" />.
+            </summary>
+            <param name="outputStream">Output <see cref="T:System.IO.Stream" />.</param>
+            <param name="startPage">Start page index.</param>
+            <param name="endPage">End page index. -1 means all pages to the end.</param>
+            <param name="encoding">The character encoding to use. UTF-8 encoding is used by default.</param>
+        </member>
+        <member name="T:ByteScout.TextRecognition.TextRecognizerException">
+            <summary>
+             Represents errors that occur during the text recognition process.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizerException.#ctor(System.String)">
+            <summary>
+             Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizerException" /> class.
+            </summary>
+            <param name="message">The message text.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizerException.#ctor(System.String,System.Exception)">
+            <summary>
+             Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizerException" /> class.
+            </summary>
+            <param name="message">The message text.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+    </members>
+</doc>

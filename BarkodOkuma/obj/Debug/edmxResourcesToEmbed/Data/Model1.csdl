@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VEGADBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="F0101D0001TBLDEPOENVANTER">
+    <Key>
+      <PropertyRef Name="IND" />
+    </Key>
+    <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TARIH" Type="DateTime" Precision="3" />
+    <Property Name="STOKNO" Type="Int32" />
+    <Property Name="DEPO" Type="Int32" />
+    <Property Name="ENVANTER" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="BELGETIPI" Type="Int16" />
+    <Property Name="BELGEIND" Type="Int32" />
+    <Property Name="SIRALAMATARIHI" Type="DateTime" Precision="3" />
+    <Property Name="SIRALAMATARIHIEX" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="HAREKETIND" Type="Int32" />
+  </EntityType>
+  <EntityType Name="F0101TBLBIRIMLEREX">
+    <Key>
+      <PropertyRef Name="IND" />
+    </Key>
+    <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BIRIMADI" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CARPAN" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BARCODESTD" Type="Int32" />
+    <Property Name="STOKNO" Type="Int32" />
+    <Property Name="SATISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ACIKLAMA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="KDV" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="KDVDAHIL" Type="Boolean" />
+    <Property Name="SPARABIRIMI" Type="Int32" />
+    <Property Name="EN" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="BOY" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="YUKSEKLIK" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="AGIRLIK" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="HACIM" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ESKISATISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="SATISFIYATIDEGISMETARIHI" Type="DateTime" Precision="3" />
+    <Property Name="SATISFIYATI1" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="SATISFIYATI2" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="SATISFIYATI3" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="PB1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PB2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PB3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ESKIFIYAT1" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ESKIFIYAT2" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ESKIFIYAT3" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="FIYATDEGISMETARIHI1" Type="DateTime" Precision="3" />
+    <Property Name="FIYATDEGISMETARIHI2" Type="DateTime" Precision="3" />
+    <Property Name="FIYATDEGISMETARIHI3" Type="DateTime" Precision="3" />
+    <Property Name="VARSAYILAN" Type="Boolean" />
+    <Property Name="ANABIRIM" Type="Boolean" />
+    <Property Name="ACIKLAMA2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="TAKSITSAYISI" Type="Int32" />
+    <Property Name="ALAN" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="LITRE" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="PLU" Type="Int32" />
+    <Property Name="ACIKLAMAIND" Type="Int32" />
+  </EntityType>
+  <EntityType Name="F0101TBLSTOKLAR">
+    <Key>
+      <PropertyRef Name="IND" />
+    </Key>
+    <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STOKNO" Type="Int32" />
+    <Property Name="MALINCINSI" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="STOKKODU" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="ANABIRIM" Type="Int32" />
+    <Property Name="BIRIMEX" Type="Int32" />
+    <Property Name="ALTSEVIYE" Type="Int32" />
+    <Property Name="KRITIKSEVIYE" Type="Int32" />
+    <Property Name="USTSEVIYE" Type="Int32" />
+    <Property Name="DEPOSEVIYESI" Type="Boolean" />
+    <Property Name="URETICI" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="AYLIKVADE" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="SERINO" Type="Int32" />
+    <Property Name="DEPO" Type="Int32" />
+    <Property Name="STOKGRUBU" Type="Int32" />
+    <Property Name="GARANTI" Type="Int16" />
+    <Property Name="PRIM" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="IPTAL" Type="Boolean" />
+    <Property Name="STOKTIPI" Type="Int32" />
+    <Property Name="STOKTAKIP" Type="Int32" />
+    <Property Name="TEMINYERI" Type="Int32" />
+    <Property Name="RAFOMRU" Type="Int32" />
+    <Property Name="RESIM" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="KALAN" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="REZERV" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="SATISKOSULU" Type="Int32" />
+    <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="KOD10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TAKSITSAYISI" Type="Int32" />
+    <Property Name="ISTIHBARAT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FIYATYOK" Type="Boolean" />
+    <Property Name="DELETED" Type="Boolean" />
+    <Property Name="ALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ALISFIYATIDEGISMETARIHI" Type="DateTime" Precision="3" />
+    <Property Name="ESKIALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="SONALISTARIHI" Type="DateTime" Precision="3" />
+    <Property Name="SONSATISTARIHI" Type="DateTime" Precision="3" />
+    <Property Name="KARTINACILMATARIHI" Type="DateTime" Precision="3" />
+    <Property Name="DEVIRIND" Type="Int32" />
+    <Property Name="MALIYET" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="KDVGRUBU" Type="Int32" />
+    <Property Name="AKTIF" Type="Boolean" />
+    <Property Name="ISCILIKIND" Type="Int32" />
+    <Property Name="ISCILIKBIRIMIND" Type="Int32" />
+    <Property Name="ISCILIKACIKLAMA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="STATUS" Type="Int32" />
+    <Property Name="DALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="APB" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="OIV" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="KARORANI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="OTV" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ISK" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="STOKGRUPTANIMI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ISKSATISFIYATI2" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ISKSATISFIYATI3" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ALISKDVORANI" Type="Int32" />
+    <Property Name="ALISISKORANI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="SIPARISALINMASIN" Type="Boolean" />
+    <Property Name="SIPARISVERILMESIN" Type="Boolean" />
+    <Property Name="P1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="P2" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="P3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="DEFAULTALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="DEFAULTALISFIYATIDEGISMESTARIHI" Type="DateTime" Precision="3" />
+    <Property Name="KDVGRUBUT" Type="Int32" />
+    <Property Name="HEDEFSATISFIAYTI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="KURUMISKONTOSU" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="TICARIISKONTO" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="ITSBILDIRIMI" Type="Boolean" />
+    <Property Name="ACILSEVK" Type="Boolean" />
+    <Property Name="SOGUKSEVK" Type="Boolean" />
+    <Property Name="ICMIKTAR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TICARISEKIL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="MAXISKORANI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="IMALATCISATISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="DKUR" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="MAXISKTUTAR" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="TAXE" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="KOD11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DAPB" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IKINCIEL" Type="Boolean" />
+    <Property Name="ETICARET" Type="Boolean" />
+    <Property Name="STOKNEVI" Type="Int32" />
+    <Property Name="OTVORANSAL" Type="Boolean" />
+    <Property Name="PLAKA" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="KM" Type="Decimal" Precision="28" Scale="8" />
+    <Property Name="POZ" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="YAZARKASA" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="VEGADBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="F0101D0001TBLDEPOENVANTER" EntityType="Self.F0101D0001TBLDEPOENVANTER" />
+    <EntitySet Name="F0101TBLBIRIMLEREX" EntityType="Self.F0101TBLBIRIMLEREX" />
+    <EntitySet Name="F0101TBLSTOKLAR" EntityType="Self.F0101TBLSTOKLAR" />
+    <FunctionImport Name="find" ReturnType="Collection(VEGADBModel.find_Result)">
+      <Parameter Name="bar" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="findStock" ReturnType="Collection(VEGADBModel.findStock_Result)">
+      <Parameter Name="IND" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="listEnvanter" ReturnType="Collection(VEGADBModel.listEnvanter_Result)" />
+  </EntityContainer>
+  <ComplexType Name="find_Result">
+    <Property Type="Decimal" Name="ENVANTER" Nullable="true" Precision="38" Scale="8" />
+    <Property Type="String" Name="STOKKODU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="BARCODE" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="SATISFIYATI1" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="SATISFIYATI2" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="SATISFIYATI3" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="ALISFIYATI" Nullable="true" Precision="28" Scale="8" />
+  </ComplexType>
+  <ComplexType Name="findStock_Result">
+    <Property Type="Decimal" Name="ENVANTER" Nullable="true" Precision="38" Scale="8" />
+    <Property Type="String" Name="STOKKODU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="BARCODE" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="SATISFIYATI1" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="SATISFIYATI2" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="SATISFIYATI3" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="ALISFIYATI" Nullable="true" Precision="28" Scale="8" />
+  </ComplexType>
+  <ComplexType Name="listEnvanter_Result">
+    <Property Type="Decimal" Name="ENVANTER" Nullable="true" Precision="38" Scale="8" />
+    <Property Type="String" Name="STOKKODU" Nullable="true" MaxLength="200" />
+    <Property Type="String" Name="BARCODE" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="SATISFIYATI1" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="SATISFIYATI2" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="SATISFIYATI3" Nullable="true" Precision="28" Scale="8" />
+    <Property Type="Decimal" Name="ALISFIYATI" Nullable="true" Precision="28" Scale="8" />
+  </ComplexType>
+</Schema>

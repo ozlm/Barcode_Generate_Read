@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Bytescout.BarCode</id>
+    <version>4.70.0.982</version>
+    <title>Bytescout.BarCode</title>
+    <authors>ByteScout</authors>
+    <owners>ByteScout</owners>
+    <licenseUrl>http://bytescout.com/files/help/BytescoutBarCodeSDK/source/html/2f09cb77-db6d-4bde-a693-1a075f7f67d1.htm</licenseUrl>
+    <projectUrl>http://bytescout.com/products/developer/barcodesdk/bytescoutbarcodesdk.html</projectUrl>
+    <iconUrl>http://bytescout.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bytescout BarCode Generator SDK for .NET, ASP.NET, SSRS, ActiveX/COM</description>
+    <summary>Bytescout BarCode Generator SDK for .NET, ASP.NET, SSRS, ActiveX/COM
+
+ByteScout (c) 2008-2017
+
+Bytescout BarCode Generator SDK includes 5 barcode components: WinForms image control, ASP.NET image control, WPF control, SSRS control and non-visual class to generate barcodes;
+
+System Requirements: .NET Fframework 2.0 or later
+Works with: .NET, ASP.NET, SSRS, ActiveX, Visual Basic 6, Classic ASP, Delphi and others.
+
+Benefits:
+
+- The SDK includes 4 types of components: non-visual class (ActiveX/COM compatible), WinForms control, ASP.NET Web control, WPF control, SSRS control;
+- Non-visual class able generate barcodes as bitmap or image file; 
+- Supports 1D barcodes: Code 39, Code 39 Extended, ISBN, Codabar, Interleaved 2 of 5 (ITF-14), Code 93, Code 128, EAN-8, EAN-13, EAN-14, EAN-128, JAN-13, GTIN-8, GTIN-12, GTIN-13, GTIN-14, InteligentMail, Bookland, UPC-A, UPC-E, POSTNET, PLANET, Numly, GS1-128, USPS Sack Label, USPS Tray Label, SwissPost Parcel, PZN, Optical Product, Deutsche Post Leitcode, Deutsche Post Identcode, Royal Mail, Singapore Postal Code, Dutch KIX, MSI, Plessy, Telepen, GS1 DataBar Omnidirectional, GS1 DataBar Stacked, GS1 DataBar Omnidirectional, GS1 DataBar Truncated;
+- Supports 2D barcodes: QR Code, Aztec, DataMatrix; GS1 DataMatrix, PDF417, Truncated PDF417, Micro PDF417, Macro PDF417, MaxiCode; 
+- Built-in barcode value validation;
+- SSRS (SQL Server Reporting Services) control included;
+- Visual Basic 6 compatible (can be used as ActiveX object from VB6 code for image generation, printing and HDC drawing);
+- Allows to tune the barcode appearance: font, font size, foreground and background colors, dimensions;
+- Able to insert generated barcode image into PDF documents and multi-page TIFF images;
+- Both vertical and horizontal image output are supported;
+- Supports PNG, JPEG, TIFF, BMP, GIF, EMF output image formats;
+- Optional source code licensing is available;
+- And much more...
+
+Web-site:
+http://bytescout.com</summary>
+    <releaseNotes>4.70.0.981 (April 09, 2018)
++ Added `AddDecorationImage` method allowing to paint an image inside of QR Code.
+- Codabar: Fixed invalid symbol "-" for Modulo9 checksum 0.
+= Minor improvements and bug fixes.
+
+4.63.0.971 (January 22, 2018)
+= Disabled "&gt;" mark (quiet zone indicator) on EAN barcodes since it is optional.
+- Fixed rare crash on GS1 application identifiers.
+= Minor improvements and bug fixes.
+
+4.62.0.964 (November 8, 2017)
+- Fixed crash on generation of MaxiCode mode 2 and 3.
+- DrawQuietZones property was not exposed to ActiveX/COM.
+= Minor improvements and bug fixes.
+
+4.61.0.952 (August 1, 2017)
+= Minor improvements and bug fixes.
+        
+4.60.0.942 (June 1, 2017)
+- Fixed WPF BarcodeControl properties binding.
+- Fixed value validation for MaxiCode symbology.
+= Visual Studio 2017 integration.
+= Removed obsolete ClientProfile builds.
+= Minor improvements and bug fixes.
+
+4.57.0.925 (March 09, 2017)
+= Minor improvements and bug fixes.
+
+4.56.0.911 (January 11, 2017)
+= Minor improvements and bug fixes.
+
+4.55.0.903 (October 21, 2016)
++ Added alternative error correction mode for 144x144 DataMatrix barcodes for compatibility with some readers.
+- DrawImagesToPDF() methods were overwriting user provided images. Fixed now.
+= Minor improvements and bug fixes.
+
+...</releaseNotes>
+    <copyright>ByteScout (c) 2008-2016</copyright>
+    <tags>bytescout barcode generation code ean jan gtin itf interleaved upc gs1 code128 code39 ean8 ean-8 ean13 ean-13 upca upc-a upce upc-e codabar pdf417 datamatrix qr qrcode aztec maxicode itf14 itf-14 postal isbn pzn databar stacked omnidirectional swisspost telepen usps intelligent post mail royal kix postnet micropdf code93 msi bookland identcode leitcode planet plessey batch</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VEGADBModelStoreContainer" CdmEntityContainer="VEGADBEntities">
+    <EntitySetMapping Name="F0101D0001TBLDEPOENVANTER">
+      <EntityTypeMapping TypeName="VEGADBModel.F0101D0001TBLDEPOENVANTER">
+        <MappingFragment StoreEntitySet="F0101D0001TBLDEPOENVANTER">
+          <ScalarProperty Name="IND" ColumnName="IND" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+          <ScalarProperty Name="STOKNO" ColumnName="STOKNO" />
+          <ScalarProperty Name="DEPO" ColumnName="DEPO" />
+          <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+          <ScalarProperty Name="BELGETIPI" ColumnName="BELGETIPI" />
+          <ScalarProperty Name="BELGEIND" ColumnName="BELGEIND" />
+          <ScalarProperty Name="SIRALAMATARIHI" ColumnName="SIRALAMATARIHI" />
+          <ScalarProperty Name="SIRALAMATARIHIEX" ColumnName="SIRALAMATARIHIEX" />
+          <ScalarProperty Name="HAREKETIND" ColumnName="HAREKETIND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="F0101TBLBIRIMLEREX">
+      <EntityTypeMapping TypeName="VEGADBModel.F0101TBLBIRIMLEREX">
+        <MappingFragment StoreEntitySet="F0101TBLBIRIMLEREX">
+          <ScalarProperty Name="IND" ColumnName="IND" />
+          <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+          <ScalarProperty Name="CARPAN" ColumnName="CARPAN" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+          <ScalarProperty Name="BARCODESTD" ColumnName="BARCODESTD" />
+          <ScalarProperty Name="STOKNO" ColumnName="STOKNO" />
+          <ScalarProperty Name="SATISFIYATI" ColumnName="SATISFIYATI" />
+          <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+          <ScalarProperty Name="KDV" ColumnName="KDV" />
+          <ScalarProperty Name="KDVDAHIL" ColumnName="KDVDAHIL" />
+          <ScalarProperty Name="SPARABIRIMI" ColumnName="SPARABIRIMI" />
+          <ScalarProperty Name="EN" ColumnName="EN" />
+          <ScalarProperty Name="BOY" ColumnName="BOY" />
+          <ScalarProperty Name="YUKSEKLIK" ColumnName="YUKSEKLIK" />
+          <ScalarProperty Name="AGIRLIK" ColumnName="AGIRLIK" />
+          <ScalarProperty Name="HACIM" ColumnName="HACIM" />
+          <ScalarProperty Name="ESKISATISFIYATI" ColumnName="ESKISATISFIYATI" />
+          <ScalarProperty Name="SATISFIYATIDEGISMETARIHI" ColumnName="SATISFIYATIDEGISMETARIHI" />
+          <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+          <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+          <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+          <ScalarProperty Name="PB1" ColumnName="PB1" />
+          <ScalarProperty Name="PB2" ColumnName="PB2" />
+          <ScalarProperty Name="PB3" ColumnName="PB3" />
+          <ScalarProperty Name="ESKIFIYAT1" ColumnName="ESKIFIYAT1" />
+          <ScalarProperty Name="ESKIFIYAT2" ColumnName="ESKIFIYAT2" />
+          <ScalarProperty Name="ESKIFIYAT3" ColumnName="ESKIFIYAT3" />
+          <ScalarProperty Name="FIYATDEGISMETARIHI1" ColumnName="FIYATDEGISMETARIHI1" />
+          <ScalarProperty Name="FIYATDEGISMETARIHI2" ColumnName="FIYATDEGISMETARIHI2" />
+          <ScalarProperty Name="FIYATDEGISMETARIHI3" ColumnName="FIYATDEGISMETARIHI3" />
+          <ScalarProperty Name="VARSAYILAN" ColumnName="VARSAYILAN" />
+          <ScalarProperty Name="ANABIRIM" ColumnName="ANABIRIM" />
+          <ScalarProperty Name="ACIKLAMA2" ColumnName="ACIKLAMA2" />
+          <ScalarProperty Name="TAKSITSAYISI" ColumnName="TAKSITSAYISI" />
+          <ScalarProperty Name="ALAN" ColumnName="ALAN" />
+          <ScalarProperty Name="LITRE" ColumnName="LITRE" />
+          <ScalarProperty Name="PLU" ColumnName="PLU" />
+          <ScalarProperty Name="ACIKLAMAIND" ColumnName="ACIKLAMAIND" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="F0101TBLSTOKLAR">
+      <EntityTypeMapping TypeName="VEGADBModel.F0101TBLSTOKLAR">
+        <MappingFragment StoreEntitySet="F0101TBLSTOKLAR">
+          <ScalarProperty Name="IND" ColumnName="IND" />
+          <ScalarProperty Name="STOKNO" ColumnName="STOKNO" />
+          <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+          <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+          <ScalarProperty Name="ANABIRIM" ColumnName="ANABIRIM" />
+          <ScalarProperty Name="BIRIMEX" ColumnName="BIRIMEX" />
+          <ScalarProperty Name="ALTSEVIYE" ColumnName="ALTSEVIYE" />
+          <ScalarProperty Name="KRITIKSEVIYE" ColumnName="KRITIKSEVIYE" />
+          <ScalarProperty Name="USTSEVIYE" ColumnName="USTSEVIYE" />
+          <ScalarProperty Name="DEPOSEVIYESI" ColumnName="DEPOSEVIYESI" />
+          <ScalarProperty Name="URETICI" ColumnName="URETICI" />
+          <ScalarProperty Name="AYLIKVADE" ColumnName="AYLIKVADE" />
+          <ScalarProperty Name="SERINO" ColumnName="SERINO" />
+          <ScalarProperty Name="DEPO" ColumnName="DEPO" />
+          <ScalarProperty Name="STOKGRUBU" ColumnName="STOKGRUBU" />
+          <ScalarProperty Name="GARANTI" ColumnName="GARANTI" />
+          <ScalarProperty Name="PRIM" ColumnName="PRIM" />
+          <ScalarProperty Name="IPTAL" ColumnName="IPTAL" />
+          <ScalarProperty Name="STOKTIPI" ColumnName="STOKTIPI" />
+          <ScalarProperty Name="STOKTAKIP" ColumnName="STOKTAKIP" />
+          <ScalarProperty Name="TEMINYERI" ColumnName="TEMINYERI" />
+          <ScalarProperty Name="RAFOMRU" ColumnName="RAFOMRU" />
+          <ScalarProperty Name="RESIM" ColumnName="RESIM" />
+          <ScalarProperty Name="KALAN" ColumnName="KALAN" />
+          <ScalarProperty Name="REZERV" ColumnName="REZERV" />
+          <ScalarProperty Name="SATISKOSULU" ColumnName="SATISKOSULU" />
+          <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+          <ScalarProperty Name="KOD2" ColumnName="KOD2" />
+          <ScalarProperty Name="KOD3" ColumnName="KOD3" />
+          <ScalarProperty Name="KOD4" ColumnName="KOD4" />
+          <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+          <ScalarProperty Name="KOD6" ColumnName="KOD6" />
+          <ScalarProperty Name="KOD7" ColumnName="KOD7" />
+          <ScalarProperty Name="KOD8" ColumnName="KOD8" />
+          <ScalarProperty Name="KOD9" ColumnName="KOD9" />
+          <ScalarProperty Name="KOD10" ColumnName="KOD10" />
+          <ScalarProperty Name="TAKSITSAYISI" ColumnName="TAKSITSAYISI" />
+          <ScalarProperty Name="ISTIHBARAT" ColumnName="ISTIHBARAT" />
+          <ScalarProperty Name="FIYATYOK" ColumnName="FIYATYOK" />
+          <ScalarProperty Name="DELETED" ColumnName="DELETED" />
+          <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+          <ScalarProperty Name="ALISFIYATIDEGISMETARIHI" ColumnName="ALISFIYATIDEGISMETARIHI" />
+          <ScalarProperty Name="ESKIALISFIYATI" ColumnName="ESKIALISFIYATI" />
+          <ScalarProperty Name="SONALISTARIHI" ColumnName="SONALISTARIHI" />
+          <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
+          <ScalarProperty Name="KARTINACILMATARIHI" ColumnName="KARTINACILMATARIHI" />
+          <ScalarProperty Name="DEVIRIND" ColumnName="DEVIRIND" />
+          <ScalarProperty Name="MALIYET" ColumnName="MALIYET" />
+          <ScalarProperty Name="KDVGRUBU" ColumnName="KDVGRUBU" />
+          <ScalarProperty Name="AKTIF" ColumnName="AKTIF" />
+          <ScalarProperty Name="ISCILIKIND" ColumnName="ISCILIKIND" />
+          <ScalarProperty Name="ISCILIKBIRIMIND" ColumnName="ISCILIKBIRIMIND" />
+          <ScalarProperty Name="ISCILIKACIKLAMA" ColumnName="ISCILIKACIKLAMA" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="DALISFIYATI" ColumnName="DALISFIYATI" />
+          <ScalarProperty Name="APB" ColumnName="APB" />
+          <ScalarProperty Name="OIV" ColumnName="OIV" />
+          <ScalarProperty Name="KARORANI" ColumnName="KARORANI" />
+          <ScalarProperty Name="OTV" ColumnName="OTV" />
+          <ScalarProperty Name="ISK" ColumnName="ISK" />
+          <ScalarProperty Name="STOKGRUPTANIMI" ColumnName="STOKGRUPTANIMI" />
+          <ScalarProperty Name="ISKSATISFIYATI2" ColumnName="ISKSATISFIYATI2" />
+          <ScalarProperty Name="ISKSATISFIYATI3" ColumnName="ISKSATISFIYATI3" />
+          <ScalarProperty Name="ALISKDVORANI" ColumnName="ALISKDVORANI" />
+          <ScalarProperty Name="ALISISKORANI" ColumnName="ALISISKORANI" />
+          <ScalarProperty Name="SIPARISALINMASIN" ColumnName="SIPARISALINMASIN" />
+          <ScalarProperty Name="SIPARISVERILMESIN" ColumnName="SIPARISVERILMESIN" />
+          <ScalarProperty Name="P1" ColumnName="P1" />
+          <ScalarProperty Name="P2" ColumnName="P2" />
+          <ScalarProperty Name="P3" ColumnName="P3" />
+          <ScalarProperty Name="DEFAULTALISFIYATI" ColumnName="DEFAULTALISFIYATI" />
+          <ScalarProperty Name="DEFAULTALISFIYATIDEGISMESTARIHI" ColumnName="DEFAULTALISFIYATIDEGISMESTARIHI" />
+          <ScalarProperty Name="KDVGRUBUT" ColumnName="KDVGRUBUT" />
+          <ScalarProperty Name="HEDEFSATISFIAYTI" ColumnName="HEDEFSATISFIAYTI" />
+          <ScalarProperty Name="KURUMISKONTOSU" ColumnName="KURUMISKONTOSU" />
+          <ScalarProperty Name="TICARIISKONTO" ColumnName="TICARIISKONTO" />
+          <ScalarProperty Name="ITSBILDIRIMI" ColumnName="ITSBILDIRIMI" />
+          <ScalarProperty Name="ACILSEVK" ColumnName="ACILSEVK" />
+          <ScalarProperty Name="SOGUKSEVK" ColumnName="SOGUKSEVK" />
+          <ScalarProperty Name="ICMIKTAR" ColumnName="ICMIKTAR" />
+          <ScalarProperty Name="TICARISEKIL" ColumnName="TICARISEKIL" />
+          <ScalarProperty Name="MAXISKORANI" ColumnName="MAXISKORANI" />
+          <ScalarProperty Name="IMALATCISATISFIYATI" ColumnName="IMALATCISATISFIYATI" />
+          <ScalarProperty Name="DKUR" ColumnName="DKUR" />
+          <ScalarProperty Name="MAXISKTUTAR" ColumnName="MAXISKTUTAR" />
+          <ScalarProperty Name="TAXE" ColumnName="TAXE" />
+          <ScalarProperty Name="KOD11" ColumnName="KOD11" />
+          <ScalarProperty Name="DAPB" ColumnName="DAPB" />
+          <ScalarProperty Name="IKINCIEL" ColumnName="IKINCIEL" />
+          <ScalarProperty Name="ETICARET" ColumnName="ETICARET" />
+          <ScalarProperty Name="STOKNEVI" ColumnName="STOKNEVI" />
+          <ScalarProperty Name="OTVORANSAL" ColumnName="OTVORANSAL" />
+          <ScalarProperty Name="PLAKA" ColumnName="PLAKA" />
+          <ScalarProperty Name="KM" ColumnName="KM" />
+          <ScalarProperty Name="POZ" ColumnName="POZ" />
+          <ScalarProperty Name="YAZARKASA" ColumnName="YAZARKASA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="find" FunctionName="VEGADBModel.Store.find">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VEGADBModel.find_Result">
+          <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+          <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+          <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+          <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+          <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+          <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="findStock" FunctionName="VEGADBModel.Store.findStock">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VEGADBModel.findStock_Result">
+          <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+          <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+          <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+          <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+          <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+          <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="listEnvanter" FunctionName="VEGADBModel.Store.listEnvanter">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="VEGADBModel.listEnvanter_Result">
+          <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+          <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+          <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+          <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+          <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+          <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+          <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

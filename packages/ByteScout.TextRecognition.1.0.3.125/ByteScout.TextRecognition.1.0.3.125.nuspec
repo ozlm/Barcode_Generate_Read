@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ByteScout.TextRecognition</id>
+    <version>1.0.3.125</version>
+    <title>ByteScout.TextRecognition</title>
+    <authors>ByteScout</authors>
+    <owners>ByteScout</owners>
+    <licenseUrl>https://bytescout.com/files/help/BytescoutTextRecognitionSDK/html/a48b0b0e-7321-4778-817a-8b35690fa815.htm</licenseUrl>
+    <projectUrl>https://bytescout.com/products/developer/text-recognition-sdk/index.html</projectUrl>
+    <iconUrl>http://bytescout.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ByteScout Text Recognition SDK for .NET, and ActiveX/COM - recognizes text from scanned documents using OCR (Optical Character Recognition).</description>
+    <summary>ByteScout Text Recognition SDK for .NET and ActiveX/COM
+
+ByteScout Inc. (c) 2017-2018
+
+System Requirements: .NET Framework 2.0 or later
+Works with: .NET languages (C#, VB.NET, etc.) and ActiveX-compatibe environments like VBScript, VC++, VB6, Classic ASP, Delphi and others.
+
+Features:
+
+- Recognizes text from scanned documents (images or PDF) using OCR (Optical Character Recognition).
+- Recognizes data from whole document page or specified rectangular regions.
+- Provides graphics filters to improve the recognition confidence of scanned documents.
+- Provides interface to add automatic corrections of OCR errors.
+- Provides ActiveX/COM interface to use from legacy programming languages (Visual Basic 6, Delphi) and scripting (VBscript, JScript and others).
+- And much more...
+
+Web-site:
+http://bytescout.com/</summary>
+    <releaseNotes>1.0.3.122 (April 09, 2018)
+==========================
+= Greatly improved Deskew algorithm for rotated scans.
+= Other minor improvements and bug fixes.
+
+1.0.2.119 (20 March 2018)
+=========================
+- Fixed EXIF rotation for input images;
+- Fixed issues with COM interop;
+= Other minor improvements and bug fixes.
+
+1.0.1.113 (22 February 2018)
+============================
+
+= Refined documentation.
++ Added `ComHelpers` class simplifying the use of SDK from VBScript and VB6.
+= Other minor improvements and bug fixes.
+
+1.0.0.100 (12 February 2018)
+============================
+= First public release.</releaseNotes>
+    <copyright>ByteScout Inc. (c) 2017-2018</copyright>
+    <tags>bytescout pdf extract text csv xls xlsx xml json split merge rotate scanned ocr searchable unsearchable</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

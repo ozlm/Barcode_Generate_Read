@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VEGADBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="F0101D0001TBLDEPOENVANTER">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TARIH" Type="datetime" />
+          <Property Name="STOKNO" Type="int" />
+          <Property Name="DEPO" Type="int" />
+          <Property Name="ENVANTER" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="BELGETIPI" Type="smallint" />
+          <Property Name="BELGEIND" Type="int" />
+          <Property Name="SIRALAMATARIHI" Type="datetime" />
+          <Property Name="SIRALAMATARIHIEX" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="HAREKETIND" Type="int" />
+        </EntityType>
+        <EntityType Name="F0101TBLBIRIMLEREX">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BIRIMADI" Type="nvarchar" MaxLength="10" />
+          <Property Name="CARPAN" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="BARCODE" Type="nvarchar" MaxLength="50" />
+          <Property Name="BARCODESTD" Type="int" />
+          <Property Name="STOKNO" Type="int" />
+          <Property Name="SATISFIYATI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ACIKLAMA" Type="nvarchar" MaxLength="20" />
+          <Property Name="KDV" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="KDVDAHIL" Type="bit" />
+          <Property Name="SPARABIRIMI" Type="int" />
+          <Property Name="EN" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="BOY" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="YUKSEKLIK" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="AGIRLIK" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="HACIM" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ESKISATISFIYATI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="SATISFIYATIDEGISMETARIHI" Type="datetime" />
+          <Property Name="SATISFIYATI1" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="SATISFIYATI2" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="SATISFIYATI3" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="PB1" Type="nvarchar" MaxLength="50" />
+          <Property Name="PB2" Type="nvarchar" MaxLength="50" />
+          <Property Name="PB3" Type="nvarchar" MaxLength="50" />
+          <Property Name="ESKIFIYAT1" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ESKIFIYAT2" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ESKIFIYAT3" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="FIYATDEGISMETARIHI1" Type="datetime" />
+          <Property Name="FIYATDEGISMETARIHI2" Type="datetime" />
+          <Property Name="FIYATDEGISMETARIHI3" Type="datetime" />
+          <Property Name="VARSAYILAN" Type="bit" />
+          <Property Name="ANABIRIM" Type="bit" />
+          <Property Name="ACIKLAMA2" Type="nvarchar" MaxLength="60" />
+          <Property Name="TAKSITSAYISI" Type="int" />
+          <Property Name="ALAN" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="LITRE" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="PLU" Type="int" />
+          <Property Name="ACIKLAMAIND" Type="int" />
+        </EntityType>
+        <EntityType Name="F0101TBLSTOKLAR">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="STOKNO" Type="int" />
+          <Property Name="MALINCINSI" Type="nvarchar" MaxLength="200" />
+          <Property Name="STOKKODU" Type="nvarchar" MaxLength="200" />
+          <Property Name="ANABIRIM" Type="int" />
+          <Property Name="BIRIMEX" Type="int" />
+          <Property Name="ALTSEVIYE" Type="int" />
+          <Property Name="KRITIKSEVIYE" Type="int" />
+          <Property Name="USTSEVIYE" Type="int" />
+          <Property Name="DEPOSEVIYESI" Type="bit" />
+          <Property Name="URETICI" Type="nvarchar" MaxLength="30" />
+          <Property Name="AYLIKVADE" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="SERINO" Type="int" />
+          <Property Name="DEPO" Type="int" />
+          <Property Name="STOKGRUBU" Type="int" />
+          <Property Name="GARANTI" Type="smallint" />
+          <Property Name="PRIM" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="IPTAL" Type="bit" />
+          <Property Name="STOKTIPI" Type="int" />
+          <Property Name="STOKTAKIP" Type="int" />
+          <Property Name="TEMINYERI" Type="int" />
+          <Property Name="RAFOMRU" Type="int" />
+          <Property Name="RESIM" Type="image" />
+          <Property Name="KALAN" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="REZERV" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="SATISKOSULU" Type="int" />
+          <Property Name="KOD1" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD2" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD3" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD4" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD5" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD6" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD7" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD8" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD9" Type="nvarchar" MaxLength="50" />
+          <Property Name="KOD10" Type="nvarchar" MaxLength="50" />
+          <Property Name="TAKSITSAYISI" Type="int" />
+          <Property Name="ISTIHBARAT" Type="ntext" />
+          <Property Name="FIYATYOK" Type="bit" />
+          <Property Name="DELETED" Type="bit" />
+          <Property Name="ALISFIYATI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ALISFIYATIDEGISMETARIHI" Type="datetime" />
+          <Property Name="ESKIALISFIYATI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="SONALISTARIHI" Type="datetime" />
+          <Property Name="SONSATISTARIHI" Type="datetime" />
+          <Property Name="KARTINACILMATARIHI" Type="datetime" />
+          <Property Name="DEVIRIND" Type="int" />
+          <Property Name="MALIYET" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="KDVGRUBU" Type="int" />
+          <Property Name="AKTIF" Type="bit" />
+          <Property Name="ISCILIKIND" Type="int" />
+          <Property Name="ISCILIKBIRIMIND" Type="int" />
+          <Property Name="ISCILIKACIKLAMA" Type="nvarchar" MaxLength="50" />
+          <Property Name="STATUS" Type="int" />
+          <Property Name="DALISFIYATI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="APB" Type="nvarchar" MaxLength="3" />
+          <Property Name="OIV" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="KARORANI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="OTV" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ISK" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="STOKGRUPTANIMI" Type="ntext" />
+          <Property Name="ISKSATISFIYATI2" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ISKSATISFIYATI3" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ALISKDVORANI" Type="int" />
+          <Property Name="ALISISKORANI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="SIPARISALINMASIN" Type="bit" />
+          <Property Name="SIPARISVERILMESIN" Type="bit" />
+          <Property Name="P1" Type="nvarchar" MaxLength="10" />
+          <Property Name="P2" Type="nvarchar" MaxLength="16" />
+          <Property Name="P3" Type="nvarchar" MaxLength="10" />
+          <Property Name="DEFAULTALISFIYATI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="DEFAULTALISFIYATIDEGISMESTARIHI" Type="datetime" />
+          <Property Name="KDVGRUBUT" Type="int" />
+          <Property Name="HEDEFSATISFIAYTI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="KURUMISKONTOSU" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="TICARIISKONTO" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="ITSBILDIRIMI" Type="bit" />
+          <Property Name="ACILSEVK" Type="bit" />
+          <Property Name="SOGUKSEVK" Type="bit" />
+          <Property Name="ICMIKTAR" Type="nvarchar" MaxLength="20" />
+          <Property Name="TICARISEKIL" Type="nvarchar" MaxLength="20" />
+          <Property Name="MAXISKORANI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="IMALATCISATISFIYATI" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="DKUR" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="MAXISKTUTAR" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="TAXE" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="KOD11" Type="nvarchar" MaxLength="20" />
+          <Property Name="DAPB" Type="nvarchar" MaxLength="3" />
+          <Property Name="IKINCIEL" Type="bit" />
+          <Property Name="ETICARET" Type="bit" />
+          <Property Name="STOKNEVI" Type="int" />
+          <Property Name="OTVORANSAL" Type="bit" />
+          <Property Name="PLAKA" Type="nvarchar" MaxLength="15" />
+          <Property Name="KM" Type="decimal" Precision="28" Scale="8" />
+          <Property Name="POZ" Type="nvarchar" MaxLength="10" />
+          <Property Name="YAZARKASA" Type="bit" />
+        </EntityType>
+        <Function Name="find" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="bar" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="findStock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="IND" Type="int" Mode="In" />
+        </Function>
+        <Function Name="listEnvanter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="VEGADBModelStoreContainer">
+          <EntitySet Name="F0101D0001TBLDEPOENVANTER" EntityType="Self.F0101D0001TBLDEPOENVANTER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="F0101TBLBIRIMLEREX" EntityType="Self.F0101TBLBIRIMLEREX" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="F0101TBLSTOKLAR" EntityType="Self.F0101TBLSTOKLAR" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VEGADBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="F0101D0001TBLDEPOENVANTER">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TARIH" Type="DateTime" Precision="3" />
+          <Property Name="STOKNO" Type="Int32" />
+          <Property Name="DEPO" Type="Int32" />
+          <Property Name="ENVANTER" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="BELGETIPI" Type="Int16" />
+          <Property Name="BELGEIND" Type="Int32" />
+          <Property Name="SIRALAMATARIHI" Type="DateTime" Precision="3" />
+          <Property Name="SIRALAMATARIHIEX" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="HAREKETIND" Type="Int32" />
+        </EntityType>
+        <EntityType Name="F0101TBLBIRIMLEREX">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BIRIMADI" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="CARPAN" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="BARCODE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="BARCODESTD" Type="Int32" />
+          <Property Name="STOKNO" Type="Int32" />
+          <Property Name="SATISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ACIKLAMA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="KDV" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="KDVDAHIL" Type="Boolean" />
+          <Property Name="SPARABIRIMI" Type="Int32" />
+          <Property Name="EN" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="BOY" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="YUKSEKLIK" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="AGIRLIK" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="HACIM" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ESKISATISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="SATISFIYATIDEGISMETARIHI" Type="DateTime" Precision="3" />
+          <Property Name="SATISFIYATI1" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="SATISFIYATI2" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="SATISFIYATI3" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="PB1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PB2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PB3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ESKIFIYAT1" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ESKIFIYAT2" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ESKIFIYAT3" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="FIYATDEGISMETARIHI1" Type="DateTime" Precision="3" />
+          <Property Name="FIYATDEGISMETARIHI2" Type="DateTime" Precision="3" />
+          <Property Name="FIYATDEGISMETARIHI3" Type="DateTime" Precision="3" />
+          <Property Name="VARSAYILAN" Type="Boolean" />
+          <Property Name="ANABIRIM" Type="Boolean" />
+          <Property Name="ACIKLAMA2" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="TAKSITSAYISI" Type="Int32" />
+          <Property Name="ALAN" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="LITRE" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="PLU" Type="Int32" />
+          <Property Name="ACIKLAMAIND" Type="Int32" />
+        </EntityType>
+        <EntityType Name="F0101TBLSTOKLAR">
+          <Key>
+            <PropertyRef Name="IND" />
+          </Key>
+          <Property Name="IND" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="STOKNO" Type="Int32" />
+          <Property Name="MALINCINSI" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="STOKKODU" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="ANABIRIM" Type="Int32" />
+          <Property Name="BIRIMEX" Type="Int32" />
+          <Property Name="ALTSEVIYE" Type="Int32" />
+          <Property Name="KRITIKSEVIYE" Type="Int32" />
+          <Property Name="USTSEVIYE" Type="Int32" />
+          <Property Name="DEPOSEVIYESI" Type="Boolean" />
+          <Property Name="URETICI" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AYLIKVADE" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="SERINO" Type="Int32" />
+          <Property Name="DEPO" Type="Int32" />
+          <Property Name="STOKGRUBU" Type="Int32" />
+          <Property Name="GARANTI" Type="Int16" />
+          <Property Name="PRIM" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="IPTAL" Type="Boolean" />
+          <Property Name="STOKTIPI" Type="Int32" />
+          <Property Name="STOKTAKIP" Type="Int32" />
+          <Property Name="TEMINYERI" Type="Int32" />
+          <Property Name="RAFOMRU" Type="Int32" />
+          <Property Name="RESIM" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="KALAN" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="REZERV" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="SATISKOSULU" Type="Int32" />
+          <Property Name="KOD1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="KOD10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TAKSITSAYISI" Type="Int32" />
+          <Property Name="ISTIHBARAT" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FIYATYOK" Type="Boolean" />
+          <Property Name="DELETED" Type="Boolean" />
+          <Property Name="ALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ALISFIYATIDEGISMETARIHI" Type="DateTime" Precision="3" />
+          <Property Name="ESKIALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="SONALISTARIHI" Type="DateTime" Precision="3" />
+          <Property Name="SONSATISTARIHI" Type="DateTime" Precision="3" />
+          <Property Name="KARTINACILMATARIHI" Type="DateTime" Precision="3" />
+          <Property Name="DEVIRIND" Type="Int32" />
+          <Property Name="MALIYET" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="KDVGRUBU" Type="Int32" />
+          <Property Name="AKTIF" Type="Boolean" />
+          <Property Name="ISCILIKIND" Type="Int32" />
+          <Property Name="ISCILIKBIRIMIND" Type="Int32" />
+          <Property Name="ISCILIKACIKLAMA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="STATUS" Type="Int32" />
+          <Property Name="DALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="APB" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="OIV" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="KARORANI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="OTV" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ISK" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="STOKGRUPTANIMI" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ISKSATISFIYATI2" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ISKSATISFIYATI3" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ALISKDVORANI" Type="Int32" />
+          <Property Name="ALISISKORANI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="SIPARISALINMASIN" Type="Boolean" />
+          <Property Name="SIPARISVERILMESIN" Type="Boolean" />
+          <Property Name="P1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="P2" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="P3" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="DEFAULTALISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="DEFAULTALISFIYATIDEGISMESTARIHI" Type="DateTime" Precision="3" />
+          <Property Name="KDVGRUBUT" Type="Int32" />
+          <Property Name="HEDEFSATISFIAYTI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="KURUMISKONTOSU" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="TICARIISKONTO" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="ITSBILDIRIMI" Type="Boolean" />
+          <Property Name="ACILSEVK" Type="Boolean" />
+          <Property Name="SOGUKSEVK" Type="Boolean" />
+          <Property Name="ICMIKTAR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TICARISEKIL" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="MAXISKORANI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="IMALATCISATISFIYATI" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="DKUR" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="MAXISKTUTAR" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="TAXE" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="KOD11" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="DAPB" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="IKINCIEL" Type="Boolean" />
+          <Property Name="ETICARET" Type="Boolean" />
+          <Property Name="STOKNEVI" Type="Int32" />
+          <Property Name="OTVORANSAL" Type="Boolean" />
+          <Property Name="PLAKA" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="KM" Type="Decimal" Precision="28" Scale="8" />
+          <Property Name="POZ" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="YAZARKASA" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="VEGADBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="F0101D0001TBLDEPOENVANTER" EntityType="Self.F0101D0001TBLDEPOENVANTER" />
+          <EntitySet Name="F0101TBLBIRIMLEREX" EntityType="Self.F0101TBLBIRIMLEREX" />
+          <EntitySet Name="F0101TBLSTOKLAR" EntityType="Self.F0101TBLSTOKLAR" />
+          <FunctionImport Name="find" ReturnType="Collection(VEGADBModel.find_Result)">
+            <Parameter Name="bar" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="findStock" ReturnType="Collection(VEGADBModel.findStock_Result)">
+            <Parameter Name="IND" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="listEnvanter" ReturnType="Collection(VEGADBModel.listEnvanter_Result)" />
+        </EntityContainer>
+        <ComplexType Name="find_Result">
+          <Property Type="Decimal" Name="ENVANTER" Nullable="true" Precision="38" Scale="8" />
+          <Property Type="String" Name="STOKKODU" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="BARCODE" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="SATISFIYATI1" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="SATISFIYATI2" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="SATISFIYATI3" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="ALISFIYATI" Nullable="true" Precision="28" Scale="8" />
+        </ComplexType>
+        <ComplexType Name="findStock_Result">
+          <Property Type="Decimal" Name="ENVANTER" Nullable="true" Precision="38" Scale="8" />
+          <Property Type="String" Name="STOKKODU" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="BARCODE" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="SATISFIYATI1" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="SATISFIYATI2" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="SATISFIYATI3" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="ALISFIYATI" Nullable="true" Precision="28" Scale="8" />
+        </ComplexType>
+        <ComplexType Name="listEnvanter_Result">
+          <Property Type="Decimal" Name="ENVANTER" Nullable="true" Precision="38" Scale="8" />
+          <Property Type="String" Name="STOKKODU" Nullable="true" MaxLength="200" />
+          <Property Type="String" Name="BARCODE" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="SATISFIYATI1" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="SATISFIYATI2" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="SATISFIYATI3" Nullable="true" Precision="28" Scale="8" />
+          <Property Type="Decimal" Name="ALISFIYATI" Nullable="true" Precision="28" Scale="8" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VEGADBModelStoreContainer" CdmEntityContainer="VEGADBEntities">
+          <EntitySetMapping Name="F0101D0001TBLDEPOENVANTER">
+            <EntityTypeMapping TypeName="VEGADBModel.F0101D0001TBLDEPOENVANTER">
+              <MappingFragment StoreEntitySet="F0101D0001TBLDEPOENVANTER">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+                <ScalarProperty Name="STOKNO" ColumnName="STOKNO" />
+                <ScalarProperty Name="DEPO" ColumnName="DEPO" />
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="BELGETIPI" ColumnName="BELGETIPI" />
+                <ScalarProperty Name="BELGEIND" ColumnName="BELGEIND" />
+                <ScalarProperty Name="SIRALAMATARIHI" ColumnName="SIRALAMATARIHI" />
+                <ScalarProperty Name="SIRALAMATARIHIEX" ColumnName="SIRALAMATARIHIEX" />
+                <ScalarProperty Name="HAREKETIND" ColumnName="HAREKETIND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="F0101TBLBIRIMLEREX">
+            <EntityTypeMapping TypeName="VEGADBModel.F0101TBLBIRIMLEREX">
+              <MappingFragment StoreEntitySet="F0101TBLBIRIMLEREX">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="BIRIMADI" ColumnName="BIRIMADI" />
+                <ScalarProperty Name="CARPAN" ColumnName="CARPAN" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="BARCODESTD" ColumnName="BARCODESTD" />
+                <ScalarProperty Name="STOKNO" ColumnName="STOKNO" />
+                <ScalarProperty Name="SATISFIYATI" ColumnName="SATISFIYATI" />
+                <ScalarProperty Name="ACIKLAMA" ColumnName="ACIKLAMA" />
+                <ScalarProperty Name="KDV" ColumnName="KDV" />
+                <ScalarProperty Name="KDVDAHIL" ColumnName="KDVDAHIL" />
+                <ScalarProperty Name="SPARABIRIMI" ColumnName="SPARABIRIMI" />
+                <ScalarProperty Name="EN" ColumnName="EN" />
+                <ScalarProperty Name="BOY" ColumnName="BOY" />
+                <ScalarProperty Name="YUKSEKLIK" ColumnName="YUKSEKLIK" />
+                <ScalarProperty Name="AGIRLIK" ColumnName="AGIRLIK" />
+                <ScalarProperty Name="HACIM" ColumnName="HACIM" />
+                <ScalarProperty Name="ESKISATISFIYATI" ColumnName="ESKISATISFIYATI" />
+                <ScalarProperty Name="SATISFIYATIDEGISMETARIHI" ColumnName="SATISFIYATIDEGISMETARIHI" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+                <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+                <ScalarProperty Name="PB1" ColumnName="PB1" />
+                <ScalarProperty Name="PB2" ColumnName="PB2" />
+                <ScalarProperty Name="PB3" ColumnName="PB3" />
+                <ScalarProperty Name="ESKIFIYAT1" ColumnName="ESKIFIYAT1" />
+                <ScalarProperty Name="ESKIFIYAT2" ColumnName="ESKIFIYAT2" />
+                <ScalarProperty Name="ESKIFIYAT3" ColumnName="ESKIFIYAT3" />
+                <ScalarProperty Name="FIYATDEGISMETARIHI1" ColumnName="FIYATDEGISMETARIHI1" />
+                <ScalarProperty Name="FIYATDEGISMETARIHI2" ColumnName="FIYATDEGISMETARIHI2" />
+                <ScalarProperty Name="FIYATDEGISMETARIHI3" ColumnName="FIYATDEGISMETARIHI3" />
+                <ScalarProperty Name="VARSAYILAN" ColumnName="VARSAYILAN" />
+                <ScalarProperty Name="ANABIRIM" ColumnName="ANABIRIM" />
+                <ScalarProperty Name="ACIKLAMA2" ColumnName="ACIKLAMA2" />
+                <ScalarProperty Name="TAKSITSAYISI" ColumnName="TAKSITSAYISI" />
+                <ScalarProperty Name="ALAN" ColumnName="ALAN" />
+                <ScalarProperty Name="LITRE" ColumnName="LITRE" />
+                <ScalarProperty Name="PLU" ColumnName="PLU" />
+                <ScalarProperty Name="ACIKLAMAIND" ColumnName="ACIKLAMAIND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="F0101TBLSTOKLAR">
+            <EntityTypeMapping TypeName="VEGADBModel.F0101TBLSTOKLAR">
+              <MappingFragment StoreEntitySet="F0101TBLSTOKLAR">
+                <ScalarProperty Name="IND" ColumnName="IND" />
+                <ScalarProperty Name="STOKNO" ColumnName="STOKNO" />
+                <ScalarProperty Name="MALINCINSI" ColumnName="MALINCINSI" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="ANABIRIM" ColumnName="ANABIRIM" />
+                <ScalarProperty Name="BIRIMEX" ColumnName="BIRIMEX" />
+                <ScalarProperty Name="ALTSEVIYE" ColumnName="ALTSEVIYE" />
+                <ScalarProperty Name="KRITIKSEVIYE" ColumnName="KRITIKSEVIYE" />
+                <ScalarProperty Name="USTSEVIYE" ColumnName="USTSEVIYE" />
+                <ScalarProperty Name="DEPOSEVIYESI" ColumnName="DEPOSEVIYESI" />
+                <ScalarProperty Name="URETICI" ColumnName="URETICI" />
+                <ScalarProperty Name="AYLIKVADE" ColumnName="AYLIKVADE" />
+                <ScalarProperty Name="SERINO" ColumnName="SERINO" />
+                <ScalarProperty Name="DEPO" ColumnName="DEPO" />
+                <ScalarProperty Name="STOKGRUBU" ColumnName="STOKGRUBU" />
+                <ScalarProperty Name="GARANTI" ColumnName="GARANTI" />
+                <ScalarProperty Name="PRIM" ColumnName="PRIM" />
+                <ScalarProperty Name="IPTAL" ColumnName="IPTAL" />
+                <ScalarProperty Name="STOKTIPI" ColumnName="STOKTIPI" />
+                <ScalarProperty Name="STOKTAKIP" ColumnName="STOKTAKIP" />
+                <ScalarProperty Name="TEMINYERI" ColumnName="TEMINYERI" />
+                <ScalarProperty Name="RAFOMRU" ColumnName="RAFOMRU" />
+                <ScalarProperty Name="RESIM" ColumnName="RESIM" />
+                <ScalarProperty Name="KALAN" ColumnName="KALAN" />
+                <ScalarProperty Name="REZERV" ColumnName="REZERV" />
+                <ScalarProperty Name="SATISKOSULU" ColumnName="SATISKOSULU" />
+                <ScalarProperty Name="KOD1" ColumnName="KOD1" />
+                <ScalarProperty Name="KOD2" ColumnName="KOD2" />
+                <ScalarProperty Name="KOD3" ColumnName="KOD3" />
+                <ScalarProperty Name="KOD4" ColumnName="KOD4" />
+                <ScalarProperty Name="KOD5" ColumnName="KOD5" />
+                <ScalarProperty Name="KOD6" ColumnName="KOD6" />
+                <ScalarProperty Name="KOD7" ColumnName="KOD7" />
+                <ScalarProperty Name="KOD8" ColumnName="KOD8" />
+                <ScalarProperty Name="KOD9" ColumnName="KOD9" />
+                <ScalarProperty Name="KOD10" ColumnName="KOD10" />
+                <ScalarProperty Name="TAKSITSAYISI" ColumnName="TAKSITSAYISI" />
+                <ScalarProperty Name="ISTIHBARAT" ColumnName="ISTIHBARAT" />
+                <ScalarProperty Name="FIYATYOK" ColumnName="FIYATYOK" />
+                <ScalarProperty Name="DELETED" ColumnName="DELETED" />
+                <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+                <ScalarProperty Name="ALISFIYATIDEGISMETARIHI" ColumnName="ALISFIYATIDEGISMETARIHI" />
+                <ScalarProperty Name="ESKIALISFIYATI" ColumnName="ESKIALISFIYATI" />
+                <ScalarProperty Name="SONALISTARIHI" ColumnName="SONALISTARIHI" />
+                <ScalarProperty Name="SONSATISTARIHI" ColumnName="SONSATISTARIHI" />
+                <ScalarProperty Name="KARTINACILMATARIHI" ColumnName="KARTINACILMATARIHI" />
+                <ScalarProperty Name="DEVIRIND" ColumnName="DEVIRIND" />
+                <ScalarProperty Name="MALIYET" ColumnName="MALIYET" />
+                <ScalarProperty Name="KDVGRUBU" ColumnName="KDVGRUBU" />
+                <ScalarProperty Name="AKTIF" ColumnName="AKTIF" />
+                <ScalarProperty Name="ISCILIKIND" ColumnName="ISCILIKIND" />
+                <ScalarProperty Name="ISCILIKBIRIMIND" ColumnName="ISCILIKBIRIMIND" />
+                <ScalarProperty Name="ISCILIKACIKLAMA" ColumnName="ISCILIKACIKLAMA" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="DALISFIYATI" ColumnName="DALISFIYATI" />
+                <ScalarProperty Name="APB" ColumnName="APB" />
+                <ScalarProperty Name="OIV" ColumnName="OIV" />
+                <ScalarProperty Name="KARORANI" ColumnName="KARORANI" />
+                <ScalarProperty Name="OTV" ColumnName="OTV" />
+                <ScalarProperty Name="ISK" ColumnName="ISK" />
+                <ScalarProperty Name="STOKGRUPTANIMI" ColumnName="STOKGRUPTANIMI" />
+                <ScalarProperty Name="ISKSATISFIYATI2" ColumnName="ISKSATISFIYATI2" />
+                <ScalarProperty Name="ISKSATISFIYATI3" ColumnName="ISKSATISFIYATI3" />
+                <ScalarProperty Name="ALISKDVORANI" ColumnName="ALISKDVORANI" />
+                <ScalarProperty Name="ALISISKORANI" ColumnName="ALISISKORANI" />
+                <ScalarProperty Name="SIPARISALINMASIN" ColumnName="SIPARISALINMASIN" />
+                <ScalarProperty Name="SIPARISVERILMESIN" ColumnName="SIPARISVERILMESIN" />
+                <ScalarProperty Name="P1" ColumnName="P1" />
+                <ScalarProperty Name="P2" ColumnName="P2" />
+                <ScalarProperty Name="P3" ColumnName="P3" />
+                <ScalarProperty Name="DEFAULTALISFIYATI" ColumnName="DEFAULTALISFIYATI" />
+                <ScalarProperty Name="DEFAULTALISFIYATIDEGISMESTARIHI" ColumnName="DEFAULTALISFIYATIDEGISMESTARIHI" />
+                <ScalarProperty Name="KDVGRUBUT" ColumnName="KDVGRUBUT" />
+                <ScalarProperty Name="HEDEFSATISFIAYTI" ColumnName="HEDEFSATISFIAYTI" />
+                <ScalarProperty Name="KURUMISKONTOSU" ColumnName="KURUMISKONTOSU" />
+                <ScalarProperty Name="TICARIISKONTO" ColumnName="TICARIISKONTO" />
+                <ScalarProperty Name="ITSBILDIRIMI" ColumnName="ITSBILDIRIMI" />
+                <ScalarProperty Name="ACILSEVK" ColumnName="ACILSEVK" />
+                <ScalarProperty Name="SOGUKSEVK" ColumnName="SOGUKSEVK" />
+                <ScalarProperty Name="ICMIKTAR" ColumnName="ICMIKTAR" />
+                <ScalarProperty Name="TICARISEKIL" ColumnName="TICARISEKIL" />
+                <ScalarProperty Name="MAXISKORANI" ColumnName="MAXISKORANI" />
+                <ScalarProperty Name="IMALATCISATISFIYATI" ColumnName="IMALATCISATISFIYATI" />
+                <ScalarProperty Name="DKUR" ColumnName="DKUR" />
+                <ScalarProperty Name="MAXISKTUTAR" ColumnName="MAXISKTUTAR" />
+                <ScalarProperty Name="TAXE" ColumnName="TAXE" />
+                <ScalarProperty Name="KOD11" ColumnName="KOD11" />
+                <ScalarProperty Name="DAPB" ColumnName="DAPB" />
+                <ScalarProperty Name="IKINCIEL" ColumnName="IKINCIEL" />
+                <ScalarProperty Name="ETICARET" ColumnName="ETICARET" />
+                <ScalarProperty Name="STOKNEVI" ColumnName="STOKNEVI" />
+                <ScalarProperty Name="OTVORANSAL" ColumnName="OTVORANSAL" />
+                <ScalarProperty Name="PLAKA" ColumnName="PLAKA" />
+                <ScalarProperty Name="KM" ColumnName="KM" />
+                <ScalarProperty Name="POZ" ColumnName="POZ" />
+                <ScalarProperty Name="YAZARKASA" ColumnName="YAZARKASA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="find" FunctionName="VEGADBModel.Store.find">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VEGADBModel.find_Result">
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+                <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+                <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="findStock" FunctionName="VEGADBModel.Store.findStock">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VEGADBModel.findStock_Result">
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+                <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+                <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="listEnvanter" FunctionName="VEGADBModel.Store.listEnvanter">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="VEGADBModel.listEnvanter_Result">
+                <ScalarProperty Name="ENVANTER" ColumnName="ENVANTER" />
+                <ScalarProperty Name="STOKKODU" ColumnName="STOKKODU" />
+                <ScalarProperty Name="BARCODE" ColumnName="BARCODE" />
+                <ScalarProperty Name="SATISFIYATI1" ColumnName="SATISFIYATI1" />
+                <ScalarProperty Name="SATISFIYATI2" ColumnName="SATISFIYATI2" />
+                <ScalarProperty Name="SATISFIYATI3" ColumnName="SATISFIYATI3" />
+                <ScalarProperty Name="ALISFIYATI" ColumnName="ALISFIYATI" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Bytescout.BarCode.Reader</id>
+    <version>10.1.0.1788</version>
+    <title>Bytescout.BarCode.Reader</title>
+    <authors>ByteScout</authors>
+    <owners>ByteScout</owners>
+    <licenseUrl>http://bytescout.com/files/help/BytescoutBarCodeReaderSDK/source/html/e68cfc5e-7860-4a18-830c-08c244332fc2.htm</licenseUrl>
+    <projectUrl>http://bytescout.com/products/developer/barcodereadersdk/bytescoutbarcodereadersdk.html</projectUrl>
+    <iconUrl>http://bytescout.com/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Bytescout Barcode Reader SDK for .NET, ASP.NET, ActiveX/COM - read barcodes from images and PDF documents</description>
+    <summary>Bytescout Barcode Reader SDK for .NET, ASP.NET, ActiveX/COM
+
+ByteScout (c) 2008-2017
+
+Bytescout BarCode Reader SDK provides functionality for reading linear and 2-dimensional barcodes 
+from JPEG, PNG, TIFF, BMP, GIF images and PDF documents.
+
+System Requirements: .NET Framework 2.0 or later
+Works with: .NET, ASP.NET, ActiveX, Visual Basic 6, Classic ASP, Delphi and others.
+
+ONLINE DOCUMENTATION: https://bytescout.com/files/help/BytescoutBarCodeReaderSDK/index.html
+
+BENEFITS: 
+- Read barcodes from from JPEG, PNG, TIFF, BMP, GIF images and PDF documents;
+- Reads one-dimensional (linear) barcodes: Code 128, Code 39, Code 93, Tripotic, GS1-128, GS1-DataBar, 
+  EAN-13, EAN-8, Patch Code, Postnet, ITF-14, Interleaved 2 of 5, UPC-A, UPC-E, Codabar, Royal Mail, 
+  Intelligent Mail, Royal Mail KIX, Australia PostCode and many more;
+- Reads two-dimensional barcodes: PDF417, DataMatrix, QR Code, Aztec, MaxiCode, Codablock F, Code 16K, MICR font and others;
+- Barcode reader returns: barcode type, decode string value, barcode bounds;
+- Supports reading of multiple barcodes from one image; 
+- Reads from PDF files without any other tools required;
+- Reads from multi-page TIFF images; 
+
+TRAIL VERSION LIMITATIONS:
+ - Adds reminder text message to output barcode value.
+
+Web page:
+http://bytescout.com/products/developer/barcodereadersdk/bytescoutbarcodereadersdk.html</summary>
+    <releaseNotes>10.1.0.1778 (April 09, 2018)
+============================
+= Improved MicroQR barcodes decoding.
+= Improved handling of PDF documents with DataMatrix barcodes drawn with fonts.
+- Fixed crash on very narrow barcode images of less than 9 pixels in width or height.
+- Fixed EAN-13 false positives when decoding only UPC-A barcodes.
+- ReadFromHBitmap, ReadFromStream and ReadFromMemory methods were not supported PDF files as input.
+- Added overloads for ReadFromHBitmap, ReadFromStream and ReadFromMemory methods allowing to specify a page range.
+= Improved documentation.
+= Other minor improvements and bug fixes.
+
+10.0.0.1754 (January 22, 2018)
+==============================
+= Performance improvements.
++ Implemented decoding of DataMatrix ECC 0-140 barcodes.
+= Improved MicroQR barcodes decoding.
+= Improved DPM DataMatrix decoding.
+= Improved EAN and UPC barcodes decoding.
+- Fixed decoded text charset detection.
+= Other minor improvements and bug fixes.
+
+9.3.0.1728 (November 8, 2017)
+=============================
+- Fixed issue with decoding barcodes from multi-page TIFFs.
+= Improved PDF documents rendering.
+= Other minor improvements and bug fixes.
+
+9.2.0.1716 (August 1, 2017)
+===========================
++ Added methods to decode barcodes from image file in memory (stream or byte array).
+- Fixed rare crashes when Heuristic Mode enabled.
+- Fixed ReadFromHBitmap() method crashing on x86 platform.
+= Improved PDF documents rendering.
+= WIAImageScanner class now able to aquire multiple images from still imaging devices.
++ New DPM DataMatrix decoder (BETA).
+= Other minor improvements and bug fixes.
+
+...</releaseNotes>
+    <copyright>ByteScout (c) 2008-2016</copyright>
+    <tags>bytescout barcode decode read recognition code ean gtin itf interleaved upc gs1 code128 code39 trioptic ean8 ean-8 ean13 ean-13 upca upc-a upce upc-e codabar pdf417 datamatrix qr qrcode aztec maxicode itf14 itf-14 codablock postal issn micr isbn pzn upu patchcode patch databar omnidirectional intelligent post mail royal kix 16k postnet micropdf code93 pharmacode msi pdf omr optical mark square circle oval checkbox line</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Drawing" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

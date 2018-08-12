@@ -1,0 +1,920 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ByteScout.TextRecognition</name>
+    </assembly>
+    <members>
+        <member name="T:ByteScout.TextRecognition.AreaRotation">
+            <summary>
+            Specifies the direction of an image's rotation and the axis used to flip the image.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipXY">
+            <summary>
+            Specifies a 180-degree rotation followed by a horizontal flip and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipNone">
+            <summary>
+            Specifies no rotation and no flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipXY">
+            <summary>
+            Specifies a 270-degree rotation followed by a horizontal flip and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipNone">
+            <summary>
+            Specifies a 90-degree rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipNone">
+            <summary>
+            Specifies a 180-degree rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipXY">
+            <summary>
+            Specifies no rotation, a horizontal flip, and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipNone">
+            <summary>
+            Specifies a 270-degree rotation without flipping.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipXY">
+            <summary>
+            Specifies a 90-degree rotation followed by a horizontal flip and then a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipY">
+            <summary>
+            Specifies a 180-degree rotation followed by a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipX">
+            <summary>
+            Specifies no rotation and a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipY">
+            <summary>
+            Specifies a 270-degree rotation followed by a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipX">
+            <summary>
+            Specifies a 90-degree rotation followed by a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipX">
+            <summary>
+            Specifies a 180-degree rotation followed by a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipY">
+            <summary>
+            Specifies no rotation and a vertical flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipX">
+            <summary>
+            Specifies a 270-degree rotation followed by a horizontal flip.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipY">
+            <summary>
+            Specifies a 90-degree rotation followed by a vertical flip.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.BaseRecognizer">
+            <summary>
+            Represents base class for text recognizers.
+            </summary>
+        </member>
+        <member name="E:ByteScout.TextRecognition.BaseRecognizer.PasswordRequired">
+            <summary>
+             Occurs when the password required to open PDF document.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.RegistrationName">
+            <summary>
+            Gets or sets the name part of the registration information.
+            </summary>
+            <value>The name part of the registration information.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.RegistrationKey">
+            <summary>
+            Gets or sets the key number part of registration information.
+            </summary>
+            <value>The key number part of registration information.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution">
+            <summary>
+            Gets or sets PDF rendering resolution. Default is 300 DPI.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingOptions">
+            <summary>
+            Gets or sets PDF rendering options.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.OCRLanguage">
+            <summary>
+            Language for Optical Character Recognition (OCR). The valid values are: 
+            <list type="bullet"><listheader><term>Value</term><description>Language</description></listheader><item><term>"eng"</term><description>English (default)</description></item><item><term>"deu"</term><description>German</description></item><item><term>"fra"</term><description>French</description></item><item><term>"spa"</term><description>Spanish</description></item><item><term>...</term><description>See more languages at https://github.com/tesseract-ocr/tessdata/tree/3.04.00 </description></item></list></summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.OCRLanguageDataFolder">
+            <summary>
+            Folder containing OCR language data files. The folder can be located anywhere by must be strongly named "tessdata".
+            </summary>
+            <remarks>
+            By default the component expects "tessdata" in the folder containing the executing assembly.
+            </remarks>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.IsDocumentLoaded">
+            <summary>
+            Gets whether a document is loaded.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.BaseRecognizer.Version">
+            <summary>
+            Gets version of the component.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.Dispose">
+            <summary>
+            Releases managed resources of the component.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.Clear">
+            <summary>
+            Releases loaded document and allocated resources.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.String)">
+            <summary>
+            Loads document from file.
+            </summary>
+            <param name="fileName">File name (path).</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.Byte[])">
+            <summary>
+            Loads document from byte array.
+            </summary>
+            <param name="bytes">Array of bytes.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.Int64)">
+            <summary>
+            Loads document from Win32 HBITMAP structure.
+            </summary>
+            <param name="hBitmap">HBITMAP pointer.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.Drawing.Image)">
+            <summary>
+            Loads document from <see cref="T:System.Drawing.Image" /> object.
+            </summary>
+            <param name="image">Image object.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.LoadDocument(System.IO.Stream)">
+            <summary>
+            Loads document from stream.
+            </summary>
+            <param name="stream">Document stream.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageCount">
+            <summary>
+            Returns number of pages in loaded document.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageSize(System.Int32)">
+            <summary>
+            Returns document page dimensions in pixels.
+            </summary>
+            <param name="pageIndex">Page index.</param>
+            <remarks>Pixel size of PDF document page is calculated from document point size (1/72") and <see cref="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution" /> value.</remarks>
+            <returns>Dimensions of the document page in pixels.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageWidth(System.Int32)">
+            <summary>
+            Returns document page width in pixels.
+            </summary>
+            <param name="pageIndex">Page index.</param>
+            <remarks>Pixel size of PDF document page is calculated from document point size (1/72") and <see cref="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution" /> value.</remarks>
+            <returns>Width of the document page in pixels.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.BaseRecognizer.GetPageHeight(System.Int32)">
+            <summary>
+            Returns document page height in pixels.
+            </summary>
+            <param name="pageIndex">Page index.</param>
+            <remarks>Pixel size of PDF document page is calculated from document point size (1/72") and <see cref="P:ByteScout.TextRecognition.BaseRecognizer.PDFRenderingResolution" /> value.</remarks>
+            <returns>Height of the document page in pixels.</returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.ComHelpers">
+            <summary>
+            Class containing helping methods to use the SDK from VBScript as ActiveX object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipNone">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipNone" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipXY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipXY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate180FlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate180FlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_RotateNoneFlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.RotateNoneFlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate270FlipX">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate270FlipX" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.AreaRotation_Rotate90FlipY">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.AreaRotation.Rotate90FlipY" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Paragraph">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Paragraph" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Block">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Block" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Line">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Line" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Word">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Word" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRObjectType_Symbol">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRObjectType.Symbol" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_Auto">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.Auto" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleBlock">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleBlock" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleLine">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleLine" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleWord">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleWord" /> enumeration value.</summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.ComHelpers.OCRProposedContentType_SingleCharacter">
+            <summary>Gets <see cref="F:ByteScout.TextRecognition.OCRProposedContentType.SingleCharacter" /> enumeration value.</summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.PasswordEventHandler">
+            <summary>
+            Represents parameters for PasswordRequired event.
+            </summary>
+            <param name="sender">Event sender.</param>
+            <param name="password">Password string.</param>
+        </member>
+        <member name="T:ByteScout.TextRecognition.ImagePreprocessingFilterList">
+            <summary>
+            Represents collection of image preprocessing filters.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns> 
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddDeskew">
+            <summary>
+            Adds deskew image processing filter with default angle threshold 0.4 deg (minimal admissible skew angle).
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddDeskew(System.Double)">
+            <summary>
+            Adds deskew image processing filter with specified angle threshold (minimal admissible skew angle).
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddDilate">
+            <summary>
+            Adds dilate image processing filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddVerticalLinesRemover">
+            <summary>
+            Adds vertical lines remover filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddHorizontalLinesRemover">
+            <summary>
+            Adds horizontal lines remover filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddMedian">
+            <summary>
+            Adds median image processing filter.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddMedian(System.Int32)">
+            <summary>
+            Adds median filter with specified block size.
+            </summary>
+            <param name="blockSize">Block size of the median filter. Default is 3.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddGammaCorrection">
+            <summary>
+            Adds gamma correction filter with default value 1.4.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddGammaCorrection(System.Double)">
+            <summary>
+            Adds gamma correction filter.
+            </summary>
+            <param name="gamma">Gamma correction value. Best result provided by values between 1.25 to 1.7.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.AddContrast(System.Int32)">
+            <summary>
+            Adds contrast image processing  filter.
+            </summary>
+            <param name="contrast">Contrast value from -100 to 100. Default is 0 (no contrast adjustment).</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.ImagePreprocessingFilterList.Clear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRProposedContentType">
+            <summary>
+            Defines types of content proposed to be on a document page (or on a page region).
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.Auto">
+            <summary>
+            OCR engine will detect the content type automatically.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleBlock">
+            <summary>
+            A document page (or page region) contains single block of text.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleLine">
+            <summary>
+            A document page (or page region) contains single line of text.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleWord">
+            <summary>
+            A document page (or page region) contains single word.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRProposedContentType.SingleCharacter">
+            <summary>
+            A document page (or page region) contains single character.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.Correction">
+            <summary>
+            Represents a correction automatically applied to recognized text to fix repeating recognition errors.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.SearchString">
+            <summary>
+            Gets the search string.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.ReplacementString">
+            <summary>
+            Gets the replacement string.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.IsRegex">
+            <summary>
+            Gets whether the <see cref="P:ByteScout.TextRecognition.Correction.SearchString" /> is regular expression (Regex).
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.Correction.RegexOptions">
+            <summary>
+            Gets regular expression options.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.Correction.#ctor(System.String,System.String,System.Boolean,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Constructs OCRCorrection object.
+            </summary>
+            <param name="searchString">The search string.</param>
+            <param name="replacementString">The replacement string.</param>
+            <param name="isRegex">Specifies whether the search string is regular expression.</param>
+            <param name="regexOptions">Regular expression options.</param>
+            <seealso cref="P:ByteScout.TextRecognition.Correction.RegexOptions" />
+        </member>
+        <member name="M:ByteScout.TextRecognition.Correction.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />.
+            </summary>
+            <returns>true if the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+            <param name="obj">
+            The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            The <paramref name="obj" /> parameter is null.
+            </exception>
+        </member>
+        <member name="M:ByteScout.TextRecognition.Correction.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>
+            A hash code for the current <see cref="T:System.Object" />.
+            </returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.CorrectionList">
+            <summary>
+            Represents collection of corrections automatically applied to recognized text to fix repeating recognition errors.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.CorrectionList.Count">
+            <summary>
+            Gets count of items in collection.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.GetGenericList">
+            <summary>
+            Returns copy of the collection as generic list of <see cref="T:ByteScout.TextRecognition.Correction" /> objects.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.Add(System.String,System.String,System.Boolean,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="searchString">The search string.</param>
+            <param name="replacementString">The replacement string.</param>
+            <param name="isRegex">Specifies whether the search string is regular expression.</param>
+            <param name="regexOptions">Regular expression options.</param>
+            <seealso cref="T:System.Text.RegularExpressions.RegexOptions" />
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.Add(ByteScout.TextRecognition.Correction)">
+            <summary>
+            Adds <see cref="T:ByteScout.TextRecognition.Correction" /> item to collection.
+            </summary>
+            <param name="item"></param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.CorrectionList.Clear">
+            <summary>
+            Clears the collection.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRObject">
+            <summary>
+            Represents recognized text object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.OCRObjectType">
+            <summary>
+            Gets type of the objects.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.X">
+            <summary>
+            Gets X coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Y">
+            <summary>
+            Gets Y coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Width">
+            <summary>
+            Gets width coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Height">
+            <summary>
+            Gets height coordinate of the object.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Text">
+            <summary>
+            Gets object text.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObject.Confidence">
+            <summary>
+            Gets recognition confidence.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObject.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:System.Object" />.
+            </summary>
+            <returns>
+            A <see cref="T:System.String" /> that represents the current <see cref="T:System.Object" />.
+            </returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRObjectList">
+            <summary>
+            Represents collection of recognized text objects.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.OCRObjectList.Count">
+            <summary>
+            Gets count of items in collection.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.GetGenericList">
+            <summary>
+            Returns copy of the collection as generic list of <see cref="T:ByteScout.TextRecognition.OCRObject" /> objects.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.Sort">
+            <summary>
+            Sorts the collection by Y, then by X coordinate.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.OCRObjectList.SortWithTolerance(System.Single,System.Single)">
+            <summary>
+            Sorts the collection by Y, then by X coordinate with tolerance.
+            </summary>
+            <param name="xTolerance">Tolerance for X coordinates.</param>
+            <param name="yTolerance">Tolerance for Y coordinates.</param>
+        </member>
+        <member name="T:ByteScout.TextRecognition.OCRObjectType">
+            <summary>
+            Specifies OCR object types.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Paragraph">
+            <summary>Paragraph</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Block">
+            <summary>Block</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Line">
+            <summary>Line</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Word">
+            <summary>Word</summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.OCRObjectType.Symbol">
+            <summary>Symbol</summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.PDFRenderingOptions">
+            <summary>
+            PDF rendering options.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.TextSmoothingMode">
+            <summary>
+            Gets or sets the text smoothing mode.
+            </summary>
+            <value>
+            The text smoothing mode.
+            </value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.VectorSmoothingMode">
+            <summary>
+            Gets or sets the vector smoothing mode.
+            </summary>
+            <value>
+            The vector smoothing mode.
+            </value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.ImageInterpolationMode">
+            <summary>
+            Gets or sets the image interpolation mode.
+            </summary>
+            <value>
+            The image interpolation mode.
+            </value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderTextObjects">
+            <summary>
+            Gets or sets whether to render text objects. True by default.
+            </summary>
+            <value>
+                <c>True</c> if render text objects; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderVectorObjects">
+            <summary>
+            Gets or sets whether to render vector objects. True by default.
+            </summary>
+            <value>
+                <c>True</c> if render vector objects; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderImageObjects">
+            <summary>
+            Gets or sets whether to render image objects. True by default.
+            </summary>
+            <value>
+                <c>True</c> if render image objects; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderCurveVectorObjects">
+            <summary>
+            Gets or sets whether to render curve vector objects. True by default.
+            </summary>
+            <remarks>
+            Use <c>RenderCurveVectorObjects</c> if you need to hide curves but keep straight lines.
+            Use <see cref="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderVectorObjects" /> if you need to hide all vector drawings.
+            <see cref="P:ByteScout.TextRecognition.PDFRenderingOptions.RenderVectorObjects" /> property supersedes <c>RenderCurveVectorObjects</c>.
+            </remarks>
+        </member>
+        <member name="T:ByteScout.TextRecognition.GraphicsTransformationQuality">
+            <summary>
+            Defines smoothing quality for text and vector graphics; interpolation quality for raster images.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.GraphicsTransformationQuality.HighQuality">
+            <summary>
+            Hight quality.
+            </summary>
+        </member>
+        <member name="F:ByteScout.TextRecognition.GraphicsTransformationQuality.HighSpeed">
+            <summary>
+            High speed.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.RecognitionArea">
+            <summary>
+            Represents document page area for text recognition.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.X">
+            <summary>
+            Gets X coordinate of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Y">
+            <summary>
+            Gets Y coordinate of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Width">
+            <summary>
+            Gets width of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Height">
+            <summary>
+            Gets height of the area.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.Rotation">
+            <summary>
+            Gets the area rotation.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionArea.ProposedContentType">
+            <summary>
+            Gets proposed content type.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Constructs new RecognitionArea object.
+            </summary>
+            <param name="x">X coordinate of the area.</param>
+            <param name="y">Y coordinate of the area.</param>
+            <param name="width">Width of the area.</param>
+            <param name="height">Height of the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Content proposed to be in the area.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.#ctor(System.Drawing.Rectangle,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Constructs new RecognitionArea object.
+            </summary>
+            <param name="rectangle">Rectangle defining the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Content proposed to be in the area.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />.
+            </summary>
+            <returns>true if the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:System.Object" />; otherwise, false.
+            </returns>
+            <param name="obj">
+            The <see cref="T:System.Object" /> to compare with the current <see cref="T:System.Object" />.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            The <paramref name="obj" /> parameter is null.
+            </exception>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionArea.GetHashCode">
+            <summary>
+            Serves as a hash function for a particular type.
+            </summary>
+            <returns>
+            A hash code for the current <see cref="T:System.Object" />.
+            </returns>
+        </member>
+        <member name="T:ByteScout.TextRecognition.RecognitionAreaList">
+            <summary>
+            Represents collection of page areas intended for text recognition.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.RecognitionAreaList.Count">
+            <summary>
+            Gets count of items in collection.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through a collection.
+            </summary>
+            <returns>
+            An <see cref="T:System.Collections.IEnumerator" /> object that can be used to iterate through the collection.
+            </returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.GetGenericList">
+            <summary>
+            Returns copy of the collection as generic list of <see cref="T:ByteScout.TextRecognition.RecognitionArea" /> objects.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Add(System.Int32,System.Int32,System.Int32,System.Int32,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="x">X coordinate of the area.</param>
+            <param name="y">Y coordinate of the area.</param>
+            <param name="width">Width of the area.</param>
+            <param name="height">Height of the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Proposed content type.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Add(System.Drawing.Rectangle,ByteScout.TextRecognition.AreaRotation,ByteScout.TextRecognition.OCRProposedContentType)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="rectangle">Rectangle defining the area.</param>
+            <param name="rotation">Rotation to apply to the area.</param>
+            <param name="proposedContentType">Proposed content type.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Add(ByteScout.TextRecognition.RecognitionArea)">
+            <summary>
+            Adds new item to collection.
+            </summary>
+            <param name="item">
+                <see cref="T:ByteScout.TextRecognition.RecognitionArea" /> object to add.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.RecognitionAreaList.Clear">
+            <summary>
+            Clears collection.
+            </summary>
+        </member>
+        <member name="T:ByteScout.TextRecognition.TextRecognizer">
+            <summary>
+             Represents text recognizer that able to extract text from scanned PDF files 
+             and PNG, JPEG, BMP and TIFF (single-page) images using Optical Character Recognition (OCR).
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.ComHelpers">
+            <summary>
+            Set of helping methods for use from COM/ActiveX. 
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.PageSeparator">
+            <summary>
+            Gets or sets the page separator character or string. Default is "\r\n".
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.RecognitionAreas">
+            <summary>
+            Collection of page areas intended for text recognition.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.Corrections">
+            <summary>
+            Collection of corrections automatically applied to recognized text to fix repeating recognition errors.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.ImagePreprocessingFilters">
+            <summary>
+            Collection of image preprocessing filters.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.AutoDetectPageRotation">
+            <summary>
+            Gets or sets a value indicating whether the TextRecognizer will try to automatically detect 
+            the rotation of a scanned page. Default is <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:ByteScout.TextRecognition.TextRecognizer.KeepTextFormatting">
+            <summary>
+            Gets or sets whether to try to keep the text formatting.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizer" /> class.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizer" /> class.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.GetOCRObjects(System.Int32,ByteScout.TextRecognition.OCRObjectType)">
+            <summary>
+            Performs the recognition and returns list of recognized text objects of specified level of discretization.
+            </summary>
+            <param name="pageIndex">Document page index.</param>
+            <param name="objectType">Objects type to return (level of discretization). Default is <see cref="F:ByteScout.TextRecognition.OCRObjectType.Word" />.</param>
+            <returns>List of recognized objects of specified discretization level.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.GetText(System.Int32,System.Int32)">
+            <summary>
+            Reads text from specifed document page range.
+            </summary>
+            <param name="startPage">Start page index (zero based).</param>
+            <param name="endPage">End page index (zero based). -1 means all pages to the end.</param>
+            <returns>Concatenated text from range of pages. Pages are separated with <see cref="P:ByteScout.TextRecognition.TextRecognizer.PageSeparator" /> symbol.</returns>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.SaveText(System.String,System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+             Saves text from specified page range to file.
+            </summary>
+            <param name="fileName">Output file name.</param>
+            <param name="startPage">Start page index.</param>
+            <param name="endPage">End page index. -1 means all pages to the end.</param>
+            <param name="encoding">The character encoding to use. UTF-8 encoding is used by default.</param>
+            <remarks>Text from different pages is  separated with <see cref="P:ByteScout.TextRecognition.TextRecognizer.PageSeparator" /> symbol.</remarks>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizer.SaveText(System.IO.Stream,System.Int32,System.Int32,System.Text.Encoding)">
+            <summary>
+             Saves text from specified page range to  <see cref="T:System.IO.Stream" />.
+            </summary>
+            <param name="outputStream">Output <see cref="T:System.IO.Stream" />.</param>
+            <param name="startPage">Start page index.</param>
+            <param name="endPage">End page index. -1 means all pages to the end.</param>
+            <param name="encoding">The character encoding to use. UTF-8 encoding is used by default.</param>
+        </member>
+        <member name="T:ByteScout.TextRecognition.TextRecognizerException">
+            <summary>
+             Represents errors that occur during the text recognition process.
+            </summary>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizerException.#ctor(System.String)">
+            <summary>
+             Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizerException" /> class.
+            </summary>
+            <param name="message">The message text.</param>
+        </member>
+        <member name="M:ByteScout.TextRecognition.TextRecognizerException.#ctor(System.String,System.Exception)">
+            <summary>
+             Initializes a new instance of the <see cref="T:ByteScout.TextRecognition.TextRecognizerException" /> class.
+            </summary>
+            <param name="message">The message text.</param>
+            <param name="innerException">The inner exception.</param>
+        </member>
+    </members>
+</doc>
